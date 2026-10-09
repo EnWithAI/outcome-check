@@ -1,0 +1,766 @@
+{
+  "schema_version": "1.0",
+  "inputs": {
+    "prs": {
+      "path": "prs.json",
+      "sha256": "103423ac99eeac89186302ff03112e9eb0a01057e9e7ca09857df9905f34fd24",
+      "records": 166
+    },
+    "runs": {
+      "path": "runs.json",
+      "sha256": "ae069ca5656493c7ba14f17bf8979bac2ed8cb56a9b74c6ae79384645f802c8d",
+      "records": 160
+    },
+    "attribution": {
+      "path": "attribution.csv",
+      "sha256": "76ae4dba80aafe2c389489650b2fe7029ad67b8cf81c1066052ea217fe375f12",
+      "records": 55
+    }
+  },
+  "window": {
+    "since": "2026-09-01",
+    "until": "2026-09-30",
+    "observed_first": "2026-08-01",
+    "observed_last": "2026-09-29",
+    "baseline_since": "2026-08-01",
+    "baseline_until": "2026-08-31"
+  },
+  "population": {
+    "records": 166,
+    "invalid": 0,
+    "duplicates": 0,
+    "bots_excluded": 6,
+    "drafts_excluded": 2,
+    "label_excluded": 0,
+    "open": 3,
+    "closed_in_window": 81,
+    "merged_in_window": 75
+  },
+  "attribution": {
+    "sources": [
+      "file",
+      "labels"
+    ],
+    "ai_assisted": 75,
+    "not_ai_assisted": 52,
+    "unknown": 31,
+    "conflicts": 0,
+    "unmatched_rows": 0
+  },
+  "metrics": [
+    {
+      "id": "acceptance_rate",
+      "title": "PR acceptance rate",
+      "definition": "Merged PRs ÷ PRs closed (merged or not) in the window.",
+      "unit": "ratio",
+      "kind": "rate",
+      "status": "verified_static_fact",
+      "anchor": "closed",
+      "segments": {
+        "all": {
+          "n": 81,
+          "numerator": 75,
+          "denominator": 81,
+          "value": 0.9259,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "ai_assisted": {
+          "n": 37,
+          "numerator": 34,
+          "denominator": 37,
+          "value": 0.9189,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "not_ai_assisted": {
+          "n": 27,
+          "numerator": 26,
+          "denominator": 27,
+          "value": 0.963,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "unknown_attribution": {
+          "n": 17,
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": "insufficient-sample",
+          "small_sample": true
+        }
+      },
+      "baseline": {
+        "n": 74,
+        "numerator": 68,
+        "denominator": 74,
+        "value": 0.9189,
+        "median": null,
+        "p75": null,
+        "p90": null,
+        "unavailable_reason": null,
+        "small_sample": false
+      },
+      "exclusions": [
+        {
+          "reason": "bot-author",
+          "count": 6
+        },
+        {
+          "reason": "draft",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "cycle_time_hours",
+      "title": "Cycle time (created → merged)",
+      "definition": "Hours from createdAt to mergedAt for PRs merged in the window; median, p75, p90.",
+      "unit": "hours",
+      "kind": "distribution",
+      "status": "verified_static_fact",
+      "anchor": "merged",
+      "segments": {
+        "all": {
+          "n": 75,
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "median": 31,
+          "p75": 46,
+          "p90": 58,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "ai_assisted": {
+          "n": 34,
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "median": 28,
+          "p75": 38,
+          "p90": 42,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "not_ai_assisted": {
+          "n": 26,
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "median": 34.5,
+          "p75": 49,
+          "p90": 54,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "unknown_attribution": {
+          "n": 15,
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": "insufficient-sample",
+          "small_sample": true
+        }
+      },
+      "baseline": {
+        "n": 68,
+        "numerator": null,
+        "denominator": null,
+        "value": null,
+        "median": 35,
+        "p75": 44,
+        "p90": 63,
+        "unavailable_reason": null,
+        "small_sample": false
+      },
+      "exclusions": [
+        {
+          "reason": "bot-author",
+          "count": 6
+        },
+        {
+          "reason": "draft",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "time_to_first_review_hours",
+      "title": "Time to first review",
+      "definition": "Hours from createdAt to the first submitted review by someone other than the author, for merged PRs that had one.",
+      "unit": "hours",
+      "kind": "distribution",
+      "status": "verified_static_fact",
+      "anchor": "merged",
+      "segments": {
+        "all": {
+          "n": 70,
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "median": 9.5,
+          "p75": 14,
+          "p90": 17,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "ai_assisted": {
+          "n": 30,
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "median": 8,
+          "p75": 11,
+          "p90": 13,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "not_ai_assisted": {
+          "n": 26,
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "median": 10.5,
+          "p75": 15,
+          "p90": 16,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "unknown_attribution": {
+          "n": 14,
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": "insufficient-sample",
+          "small_sample": true
+        }
+      },
+      "baseline": {
+        "n": 59,
+        "numerator": null,
+        "denominator": null,
+        "value": null,
+        "median": 11,
+        "p75": 13,
+        "p90": 19,
+        "unavailable_reason": null,
+        "small_sample": false
+      },
+      "exclusions": [
+        {
+          "reason": "bot-author",
+          "count": 6
+        },
+        {
+          "reason": "draft",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "unreviewed_merge_rate",
+      "title": "Merged without review",
+      "definition": "Merged PRs with no submitted review by someone other than the author ÷ merged PRs.",
+      "unit": "ratio",
+      "kind": "rate",
+      "status": "verified_static_fact",
+      "anchor": "merged",
+      "segments": {
+        "all": {
+          "n": 75,
+          "numerator": 5,
+          "denominator": 75,
+          "value": 0.0667,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "ai_assisted": {
+          "n": 34,
+          "numerator": 4,
+          "denominator": 34,
+          "value": 0.1176,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "not_ai_assisted": {
+          "n": 26,
+          "numerator": 0,
+          "denominator": 26,
+          "value": 0,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "unknown_attribution": {
+          "n": 15,
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": "insufficient-sample",
+          "small_sample": true
+        }
+      },
+      "baseline": {
+        "n": 68,
+        "numerator": 9,
+        "denominator": 68,
+        "value": 0.1324,
+        "median": null,
+        "p75": null,
+        "p90": null,
+        "unavailable_reason": null,
+        "small_sample": false
+      },
+      "exclusions": [
+        {
+          "reason": "bot-author",
+          "count": 6
+        },
+        {
+          "reason": "draft",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "changes_requested_rate",
+      "title": "Changes requested (rework proxy)",
+      "definition": "Merged PRs with at least one CHANGES_REQUESTED review ÷ merged PRs. A proxy for rework, not a quality score.",
+      "unit": "ratio",
+      "kind": "rate",
+      "status": "hypothesis",
+      "anchor": "merged",
+      "segments": {
+        "all": {
+          "n": 75,
+          "numerator": 16,
+          "denominator": 75,
+          "value": 0.2133,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "ai_assisted": {
+          "n": 34,
+          "numerator": 9,
+          "denominator": 34,
+          "value": 0.2647,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "not_ai_assisted": {
+          "n": 26,
+          "numerator": 3,
+          "denominator": 26,
+          "value": 0.1154,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "unknown_attribution": {
+          "n": 15,
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": "insufficient-sample",
+          "small_sample": true
+        }
+      },
+      "baseline": {
+        "n": 68,
+        "numerator": 15,
+        "denominator": 68,
+        "value": 0.2206,
+        "median": null,
+        "p75": null,
+        "p90": null,
+        "unavailable_reason": null,
+        "small_sample": false
+      },
+      "exclusions": [
+        {
+          "reason": "bot-author",
+          "count": 6
+        },
+        {
+          "reason": "draft",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "post_review_commit_rate",
+      "title": "Commits after first review (rework proxy)",
+      "definition": "Merged PRs with a commit dated after the first non-author review ÷ merged PRs that had such a review. A proxy for rework.",
+      "unit": "ratio",
+      "kind": "rate",
+      "status": "hypothesis",
+      "anchor": "merged",
+      "segments": {
+        "all": {
+          "n": 70,
+          "numerator": 16,
+          "denominator": 70,
+          "value": 0.2286,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "ai_assisted": {
+          "n": 30,
+          "numerator": 9,
+          "denominator": 30,
+          "value": 0.3,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "not_ai_assisted": {
+          "n": 26,
+          "numerator": 3,
+          "denominator": 26,
+          "value": 0.1154,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "unknown_attribution": {
+          "n": 14,
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": "insufficient-sample",
+          "small_sample": true
+        }
+      },
+      "baseline": {
+        "n": 59,
+        "numerator": 15,
+        "denominator": 59,
+        "value": 0.2542,
+        "median": null,
+        "p75": null,
+        "p90": null,
+        "unavailable_reason": null,
+        "small_sample": false
+      },
+      "exclusions": [
+        {
+          "reason": "bot-author",
+          "count": 6
+        },
+        {
+          "reason": "draft",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "ci_first_pass_rate",
+      "title": "CI first-pass rate",
+      "definition": "Merged PRs whose first CI-tested commit passed every counted run on the first attempt ÷ merged PRs with linked CI runs.",
+      "unit": "ratio",
+      "kind": "rate",
+      "status": "verified_static_fact",
+      "anchor": "merged",
+      "segments": {
+        "all": {
+          "n": 75,
+          "numerator": 60,
+          "denominator": 75,
+          "value": 0.8,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "ai_assisted": {
+          "n": 34,
+          "numerator": 25,
+          "denominator": 34,
+          "value": 0.7353,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "not_ai_assisted": {
+          "n": 26,
+          "numerator": 23,
+          "denominator": 26,
+          "value": 0.8846,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "unknown_attribution": {
+          "n": 15,
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": "insufficient-sample",
+          "small_sample": true
+        }
+      },
+      "baseline": {
+        "n": 68,
+        "numerator": 48,
+        "denominator": 68,
+        "value": 0.7059,
+        "median": null,
+        "p75": null,
+        "p90": null,
+        "unavailable_reason": null,
+        "small_sample": false
+      },
+      "exclusions": [
+        {
+          "reason": "bot-author",
+          "count": 6
+        },
+        {
+          "reason": "draft",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "revert_rate",
+      "title": "Reverted PRs (proxy)",
+      "definition": "Merged non-revert PRs whose exact title T is reverted by a later-merged PR titled Revert \"T\" anywhere in the export ÷ merged non-revert PRs. Only GitHub-style revert titles are detected.",
+      "unit": "ratio",
+      "kind": "rate",
+      "status": "hypothesis",
+      "anchor": "merged",
+      "segments": {
+        "all": {
+          "n": 74,
+          "numerator": 1,
+          "denominator": 74,
+          "value": 0.0135,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "ai_assisted": {
+          "n": 34,
+          "numerator": 0,
+          "denominator": 34,
+          "value": 0,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "not_ai_assisted": {
+          "n": 25,
+          "numerator": 0,
+          "denominator": 25,
+          "value": 0,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "unknown_attribution": {
+          "n": 15,
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": "insufficient-sample",
+          "small_sample": true
+        }
+      },
+      "baseline": {
+        "n": 68,
+        "numerator": 0,
+        "denominator": 68,
+        "value": 0,
+        "median": null,
+        "p75": null,
+        "p90": null,
+        "unavailable_reason": null,
+        "small_sample": false
+      },
+      "exclusions": [
+        {
+          "reason": "bot-author",
+          "count": 6
+        },
+        {
+          "reason": "draft",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "pr_size_lines",
+      "title": "PR size (lines changed)",
+      "definition": "additions + deletions of merged PRs; median, p75, p90. Context for the other metrics, not an outcome.",
+      "unit": "lines",
+      "kind": "distribution",
+      "status": "verified_static_fact",
+      "anchor": "merged",
+      "segments": {
+        "all": {
+          "n": 75,
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "median": 238,
+          "p75": 316,
+          "p90": 345,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "ai_assisted": {
+          "n": 34,
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "median": 205,
+          "p75": 272,
+          "p90": 342,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "not_ai_assisted": {
+          "n": 26,
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "median": 290.5,
+          "p75": 335,
+          "p90": 353,
+          "unavailable_reason": null,
+          "small_sample": false
+        },
+        "unknown_attribution": {
+          "n": 15,
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "median": null,
+          "p75": null,
+          "p90": null,
+          "unavailable_reason": "insufficient-sample",
+          "small_sample": true
+        }
+      },
+      "baseline": {
+        "n": 68,
+        "numerator": null,
+        "denominator": null,
+        "value": null,
+        "median": 178.5,
+        "p75": 254,
+        "p90": 321,
+        "unavailable_reason": null,
+        "small_sample": false
+      },
+      "exclusions": [
+        {
+          "reason": "bot-author",
+          "count": 6
+        },
+        {
+          "reason": "draft",
+          "count": 2
+        }
+      ]
+    }
+  ],
+  "ai_cost": [
+    {
+      "currency": "USD",
+      "total": 51.21,
+      "prs_with_cost": 25,
+      "ai_assisted_merged": 34,
+      "per_pr": 2.05
+    }
+  ],
+  "coverage_limitations": [],
+  "notices": [
+    "Descriptive, not causal: differences between segments or windows do not show that AI assistance (or anything else) caused them.",
+    "AI attribution is unknown unless an attribution file, a configured label or a configured commit trailer says otherwise.",
+    "Rework and revert metrics are proxies (status: hypothesis), not quality judgements.",
+    "No per-person data: identities are read only to compute aggregates and never appear in this report."
+  ],
+  "run_metadata": {
+    "tool": "outcome-check",
+    "tool_version": "0.1.0-alpha.0",
+    "generated_at": "2026-01-01T00:00:00.000Z",
+    "duration_ms": 0,
+    "node_version": "normalized",
+    "config_source": ".outcome-check.json",
+    "min_sample": 20,
+    "audit": false,
+    "network": false,
+    "executed_code": false,
+    "model_usage": null,
+    "identities_in_output": false
+  }
+}

@@ -55,7 +55,8 @@ Privacy: offline; no network, no telemetry; no names, logins, emails or titles i
 
 /** Writes a report file atomically (temp file + rename); the parent directory must exist. */
 function writeOutput(path: string, content: string): void {
-  if (existsSync(path) && statSync(path).isDirectory()) throw usageError(`--output points to a directory: ${path}`);
+  if (existsSync(path) && statSync(path).isDirectory())
+    throw usageError(`--output points to a directory: ${path}`);
   if (!existsSync(dirname(path))) throw usageError(`Output directory does not exist: ${dirname(path)}`);
   const temp = join(dirname(path), `.outcome-check-${process.pid}-${Date.now()}.tmp`);
   writeFileSync(temp, content, { mode: 0o644 });
@@ -69,7 +70,12 @@ export function readSchema(): string {
 
 /** Metric catalog as text. */
 function metricsText(): string {
-  return METRICS.map((m) => `${m.id} (${m.status === "hypothesis" ? "proxy" : "measured"}, ${m.anchor} PRs)\n  ${m.definition}`).join("\n\n") + "\n";
+  return (
+    METRICS.map(
+      (m) =>
+        `${m.id} (${m.status === "hypothesis" ? "proxy" : "measured"}, ${m.anchor} PRs)\n  ${m.definition}`
+    ).join("\n\n") + "\n"
+  );
 }
 
 /** Parses arguments and runs one command. */
@@ -122,10 +128,13 @@ async function main(argv: string[], io: CliIO): Promise<number> {
     io.stdout(command === "schema" ? readSchema() : metricsText());
     return ExitCode.Ok;
   }
-  if (command !== "report") throw usageError(`Unknown command: ${command}`, "Commands: report, metrics, schema.");
-  if (values.prs === undefined) throw usageError("report requires --prs <file>", "See `outcome-check --help` for the gh export command.");
+  if (command !== "report")
+    throw usageError(`Unknown command: ${command}`, "Commands: report, metrics, schema.");
+  if (values.prs === undefined)
+    throw usageError("report requires --prs <file>", "See `outcome-check --help` for the gh export command.");
   const format = values.format ?? "markdown";
-  if (format !== "markdown" && format !== "json" && format !== "html") throw usageError(`--format must be "markdown", "json" or "html"`);
+  if (format !== "markdown" && format !== "json" && format !== "html")
+    throw usageError(`--format must be "markdown", "json" or "html"`);
 
   const abs = (p: string): string => (isAbsolute(p) ? p : resolve(io.cwd, p));
   let config: Config = DEFAULT_CONFIG;
@@ -138,7 +147,8 @@ async function main(argv: string[], io: CliIO): Promise<number> {
     configSource = ".outcome-check.json";
   }
   if (values["min-sample"] !== undefined) {
-    if (!/^\d+$/.test(values["min-sample"])) throw usageError("--min-sample must be an integer from 1 to 10000");
+    if (!/^\d+$/.test(values["min-sample"]))
+      throw usageError("--min-sample must be an integer from 1 to 10000");
     config = { ...config, minSample: validateConfig({ min_sample: Number(values["min-sample"]) }).minSample };
   }
 
@@ -156,7 +166,12 @@ async function main(argv: string[], io: CliIO): Promise<number> {
     ...(io.now ? { now: io.now } : {}),
   });
   const options = { branding: !values["no-branding"] };
-  const rendered = format === "json" ? renderJson(report) : format === "html" ? renderHtml(report, options) : renderMarkdown(report, options);
+  const rendered =
+    format === "json"
+      ? renderJson(report)
+      : format === "html"
+        ? renderHtml(report, options)
+        : renderMarkdown(report, options);
   if (values.output !== undefined) writeOutput(abs(values.output), rendered);
   else io.stdout(rendered);
   if (!values.quiet) {

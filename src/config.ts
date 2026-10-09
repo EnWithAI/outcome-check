@@ -34,7 +34,11 @@ function bad(key: string, message: string): never {
 
 /** Validates a list of short plain strings. */
 function strings(value: unknown, key: string): string[] {
-  if (!Array.isArray(value) || value.length > 200 || value.some((s) => typeof s !== "string" || s.length === 0 || s.length > 200))
+  if (
+    !Array.isArray(value) ||
+    value.length > 200 ||
+    value.some((s) => typeof s !== "string" || s.length === 0 || s.length > 200)
+  )
     bad(key, "must be an array of 1–200 character strings (max 200 entries)");
   return value as string[];
 }
@@ -52,14 +56,17 @@ export function validateConfig(raw: unknown): Config {
       if (key !== "labels" && key !== "commit_trailers") bad(`attribution.${key}`, "is not a known key");
     if (a.labels !== undefined) {
       const labels = a.labels as Record<string, unknown>;
-      if (labels === null || typeof labels !== "object" || Array.isArray(labels)) bad("attribution.labels", "must be an object");
+      if (labels === null || typeof labels !== "object" || Array.isArray(labels))
+        bad("attribution.labels", "must be an object");
       for (const [label, flag] of Object.entries(labels)) {
         if (typeof flag !== "boolean") bad(`attribution.labels.${label}`, "must be true or false");
-        if (label.length === 0 || label.length > 200) bad("attribution.labels", "names must be 1–200 characters");
+        if (label.length === 0 || label.length > 200)
+          bad("attribution.labels", "names must be 1–200 characters");
         config.attributionLabels[label] = flag;
       }
     }
-    if (a.commit_trailers !== undefined) config.commitTrailers = strings(a.commit_trailers, "attribution.commit_trailers");
+    if (a.commit_trailers !== undefined)
+      config.commitTrailers = strings(a.commit_trailers, "attribution.commit_trailers");
   }
   if (obj.exclude_labels !== undefined) config.excludeLabels = strings(obj.exclude_labels, "exclude_labels");
   if (obj.include_bots !== undefined) {
@@ -67,7 +74,11 @@ export function validateConfig(raw: unknown): Config {
     config.includeBots = obj.include_bots;
   }
   if (obj.min_sample !== undefined) {
-    if (!Number.isInteger(obj.min_sample) || (obj.min_sample as number) < 1 || (obj.min_sample as number) > 10_000)
+    if (
+      !Number.isInteger(obj.min_sample) ||
+      (obj.min_sample as number) < 1 ||
+      (obj.min_sample as number) > 10_000
+    )
       bad("min_sample", "must be an integer from 1 to 10000");
     config.minSample = obj.min_sample as number;
   }

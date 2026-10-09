@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'">
+<title>Outcome Check report</title>
+<style>
+:root{--bg:#ffffff;--fg:#1f2328;--muted:#59636e;--line:#d1d9e0;--head:#f6f8fa;--warn:#9a6700}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--line:#3d444d;--head:#151b23;--warn:#d29922}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:1100px;margin:0 auto;padding:24px 16px}h1{font-size:1.6rem;margin:0 0 12px}h2{font-size:1.15rem;margin:28px 0 8px}
+.notice{border-left:3px solid var(--warn);padding:4px 12px;color:var(--muted);margin:4px 0}
+.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}th{background:var(--head)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em}footer{margin-top:32px;color:var(--muted);font-size:.85rem}
+a{color:inherit}</style>
+</head>
+<body>
+<main>
+<h1>Outcome Check report</h1>
+<p class="notice">Descriptive, not causal: differences between segments or windows do not show that AI assistance (or anything else) caused them.</p>
+<p class="notice">AI attribution is unknown unless an attribution file, a configured label or a configured commit trailer says otherwise.</p>
+<p class="notice">Rework and revert metrics are proxies (status: hypothesis), not quality judgements.</p>
+<p class="notice">No per-person data: identities are read only to compute aggregates and never appear in this report.</p>
+<p>Window: 2026-09-01 to 2026-09-30 · baseline 2026-08-01 to 2026-08-31 · min_sample 20</p>
+<div class="scroll"><table>
+<tr><th>Records</th><th>Invalid</th><th>Duplicates</th><th>Bots excl.</th><th>Drafts excl.</th><th>Label excl.</th><th>Open</th><th>Closed in window</th><th>Merged in window</th></tr>
+<tr><td>166</td><td>0</td><td>0</td><td>6</td><td>2</td><td>0</td><td>3</td><td>81</td><td>75</td></tr>
+</table></div>
+<p>Attribution (file, labels): AI-assisted 75 · not AI-assisted 52 · unknown 31</p>
+<h2>Metrics</h2>
+<div class="scroll"><table>
+<tr><th>Metric</th><th>Status</th><th>All PRs</th><th>AI-assisted</th><th>Not AI-assisted</th><th>Attribution unknown</th><th>Baseline (all)</th></tr>
+<tr><th scope="row">PR acceptance rate</th><td>measured</td><td>92.59% (75/81)</td><td>91.89% (34/37)</td><td>96.3% (26/27)</td><td>— (withheld: sample below min_sample, n=17)</td><td>91.89% (68/74)</td></tr>
+<tr><th scope="row">Cycle time (created → merged)</th><td>measured</td><td>median 31 h · p75 46 · p90 58 (n=75)</td><td>median 28 h · p75 38 · p90 42 (n=34)</td><td>median 34.5 h · p75 49 · p90 54 (n=26)</td><td>— (withheld: sample below min_sample, n=15)</td><td>median 35 h · p75 44 · p90 63 (n=68)</td></tr>
+<tr><th scope="row">Time to first review</th><td>measured</td><td>median 9.5 h · p75 14 · p90 17 (n=70)</td><td>median 8 h · p75 11 · p90 13 (n=30)</td><td>median 10.5 h · p75 15 · p90 16 (n=26)</td><td>— (withheld: sample below min_sample, n=14)</td><td>median 11 h · p75 13 · p90 19 (n=59)</td></tr>
+<tr><th scope="row">Merged without review</th><td>measured</td><td>6.67% (5/75)</td><td>11.76% (4/34)</td><td>0% (0/26)</td><td>— (withheld: sample below min_sample, n=15)</td><td>13.24% (9/68)</td></tr>
+<tr><th scope="row">Changes requested (rework proxy)</th><td>proxy</td><td>21.33% (16/75)</td><td>26.47% (9/34)</td><td>11.54% (3/26)</td><td>— (withheld: sample below min_sample, n=15)</td><td>22.06% (15/68)</td></tr>
+<tr><th scope="row">Commits after first review (rework proxy)</th><td>proxy</td><td>22.86% (16/70)</td><td>30% (9/30)</td><td>11.54% (3/26)</td><td>— (withheld: sample below min_sample, n=14)</td><td>25.42% (15/59)</td></tr>
+<tr><th scope="row">CI first-pass rate</th><td>measured</td><td>80% (60/75)</td><td>73.53% (25/34)</td><td>88.46% (23/26)</td><td>— (withheld: sample below min_sample, n=15)</td><td>70.59% (48/68)</td></tr>
+<tr><th scope="row">Reverted PRs (proxy)</th><td>proxy</td><td>1.35% (1/74)</td><td>0% (0/34)</td><td>0% (0/25)</td><td>— (withheld: sample below min_sample, n=15)</td><td>0% (0/68)</td></tr>
+<tr><th scope="row">PR size (lines changed)</th><td>measured</td><td>median 238 · p75 316 · p90 345 (n=75)</td><td>median 205 · p75 272 · p90 342 (n=34)</td><td>median 290.5 · p75 335 · p90 353 (n=26)</td><td>— (withheld: sample below min_sample, n=15)</td><td>median 178.5 · p75 254 · p90 321 (n=68)</td></tr>
+</table></div>
+<h2>AI cost (as recorded)</h2>
+<ul><li><code>USD</code>: total 51.21, 2.05 per merged AI-assisted PR with a recorded cost (25 of 34).</li></ul>
+<h2>Definitions</h2>
+<ul><li><strong>PR acceptance rate</strong> (<code>acceptance_rate</code>): Merged PRs ÷ PRs closed (merged or not) in the window.</li>
+<li><strong>Cycle time (created → merged)</strong> (<code>cycle_time_hours</code>): Hours from createdAt to mergedAt for PRs merged in the window; median, p75, p90.</li>
+<li><strong>Time to first review</strong> (<code>time_to_first_review_hours</code>): Hours from createdAt to the first submitted review by someone other than the author, for merged PRs that had one.</li>
+<li><strong>Merged without review</strong> (<code>unreviewed_merge_rate</code>): Merged PRs with no submitted review by someone other than the author ÷ merged PRs.</li>
+<li><strong>Changes requested (rework proxy)</strong> (<code>changes_requested_rate</code>): Merged PRs with at least one CHANGES_REQUESTED review ÷ merged PRs. A proxy for rework, not a quality score.</li>
+<li><strong>Commits after first review (rework proxy)</strong> (<code>post_review_commit_rate</code>): Merged PRs with a commit dated after the first non-author review ÷ merged PRs that had such a review. A proxy for rework.</li>
+<li><strong>CI first-pass rate</strong> (<code>ci_first_pass_rate</code>): Merged PRs whose first CI-tested commit passed every counted run on the first attempt ÷ merged PRs with linked CI runs.</li>
+<li><strong>Reverted PRs (proxy)</strong> (<code>revert_rate</code>): Merged non-revert PRs whose exact title T is reverted by a later-merged PR titled Revert &quot;T&quot; anywhere in the export ÷ merged non-revert PRs. Only GitHub-style revert titles are detected.</li>
+<li><strong>PR size (lines changed)</strong> (<code>pr_size_lines</code>): additions + deletions of merged PRs; median, p75, p90. Context for the other metrics, not an outcome.</li></ul>
+<h2>Data limitations</h2>
+<p>None detected.</p>
+<footer>Outcome Check 0.1.0-alpha.0 · offline · Built by EnWithAI · Part of CrewPE Engineering Commons · <a href="https://crewpe.ai">crewpe.ai</a></footer>
+</main>
+</body>
+</html>

@@ -12,7 +12,9 @@ const load = (name: string): Record<string, unknown> & { args: string[]; fixture
 
 /** Picks the keys present in `expected` from a metric value. */
 function pick(value: MetricValue | null, expected: Record<string, unknown>): Record<string, unknown> {
-  return Object.fromEntries(Object.keys(expected).map((k) => [k, (value as unknown as Record<string, unknown>)?.[k]]));
+  return Object.fromEntries(
+    Object.keys(expected).map((k) => [k, (value as unknown as Record<string, unknown>)?.[k]])
+  );
 }
 
 const metric = (report: Report, id: string): Metric => {

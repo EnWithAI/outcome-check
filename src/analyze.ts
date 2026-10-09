@@ -15,7 +15,7 @@ import {
   type PullRequest,
   type Run,
 } from "./input/read.js";
-import { METRICS, REVERT_TITLE, round, toValue, type MetricContext } from "./metrics/metrics.js";
+import { extent, METRICS, REVERT_TITLE, round, toValue, type MetricContext } from "./metrics/metrics.js";
 import type { AiCost, Limitation, Metric, Report, SegmentName } from "./types.js";
 import { TOOL_VERSION } from "./version.js";
 
@@ -70,7 +70,8 @@ export function analyze(options: AnalyzeOptions): Report {
   const until = day(options.until, "--until", true);
   const bSince = day(options.baselineSince, "--baseline-since", false);
   const bUntil = day(options.baselineUntil, "--baseline-until", true);
-  if (since !== null && until !== null && since >= until) throw usageError("--since must not be after --until");
+  if (since !== null && until !== null && since >= until)
+    throw usageError("--since must not be after --until");
   if ((options.baselineSince === null) !== (options.baselineUntil === null))
     throw usageError("--baseline-since and --baseline-until must be given together");
   if (bSince !== null && bUntil !== null && bSince >= bUntil)
@@ -120,9 +121,14 @@ export function analyze(options: AnalyzeOptions): Report {
 
   const reviewsExported = valid.some((p) => p.reviews !== null);
   const commitsExported = valid.some((p) => p.commits !== null);
-  if (!reviewsExported) limit("reviews-not-exported", "No PR record includes `reviews`; review metrics are unavailable.", 1);
+  if (!reviewsExported)
+    limit("reviews-not-exported", "No PR record includes `reviews`; review metrics are unavailable.", 1);
   if (!commitsExported)
-    limit("commits-not-exported", "No PR record includes `commits`; CI and post-review metrics are unavailable.", 1);
+    limit(
+      "commits-not-exported",
+      "No PR record includes `commits`; CI and post-review metrics are unavailable.",
+      1
+    );
   limit(
     "reviews-truncated",
     "Some PRs have exactly 100 reviews, the gh export cap; later reviews are missing.",
@@ -146,11 +152,17 @@ export function analyze(options: AnalyzeOptions): Report {
     const runFile = readInput(options.runsPath, "--runs");
     const rawRuns = parseJsonArray(runFile.text, "--runs");
     const runs = rawRuns.map(toRun);
-    limit("invalid-run", "Run records without a valid headSha were excluded.", runs.filter((r) => r === null).length);
+    limit(
+      "invalid-run",
+      "Run records without a valid headSha were excluded.",
+      runs.filter((r) => r === null).length
+    );
     runsBySha = new Map();
     for (const run of runs) {
       if (run === null) continue;
-      runsBySha.set(run.headSha, [...(runsBySha.get(run.headSha) ?? []), run]);
+      const list = runsBySha.get(run.headSha);
+      if (list) list.push(run);
+      else runsBySha.set(run.headSha, [run]);
     }
     const prShas = new Set(valid.flatMap((p) => (p.commits ?? []).map((c) => c.oid)));
     limit(
@@ -175,11 +187,23 @@ export function analyze(options: AnalyzeOptions): Report {
   if (options.attributionPath !== null) {
     const file = readInput(options.attributionPath, "--attribution");
     const parsed = parseAttribution(file.text, options.attributionPath);
-    limit("invalid-attribution-row", "Attribution rows with an invalid pr, ai_assisted, cost or currency were ignored.", parsed.invalid);
+    limit(
+      "invalid-attribution-row",
+      "Attribution rows with an invalid pr, ai_assisted, cost or currency were ignored.",
+      parsed.invalid
+    );
     for (const row of parsed.rows) if (!fileRows.has(row.pr)) fileRows.set(row.pr, row);
     unmatched = [...fileRows.keys()].filter((n) => !seen.has(n)).length;
-    limit("attribution-unmatched", "Attribution rows referred to PR numbers that are not in the PR export.", unmatched);
-    attributionSummary = { path: shown(options.attributionPath), sha256: file.sha256, records: parsed.rows.length + parsed.invalid };
+    limit(
+      "attribution-unmatched",
+      "Attribution rows referred to PR numbers that are not in the PR export.",
+      unmatched
+    );
+    attributionSummary = {
+      path: shown(options.attributionPath),
+      sha256: file.sha256,
+      records: parsed.rows.length + parsed.invalid,
+    };
     sources.push("file");
   }
   if (Object.keys(config.attributionLabels).length > 0) sources.push("labels");
@@ -189,11 +213,22 @@ export function analyze(options: AnalyzeOptions): Report {
   const attribution = new Map<number, boolean | null>();
   for (const pr of population) {
     const fromFile = fileRows.get(pr.number)?.aiAssisted ?? null;
-    const labelFlags = pr.labels.filter((l) => l in config.attributionLabels).map((l) => config.attributionLabels[l] as boolean);
-    const fromLabel = labelFlags.length === 0 ? null : labelFlags.includes(true) && !labelFlags.includes(false) ? true : labelFlags.includes(false) && !labelFlags.includes(true) ? false : null;
+    const labelFlags = pr.labels
+      .filter((l) => l in config.attributionLabels)
+      .map((l) => config.attributionLabels[l] as boolean);
+    const fromLabel =
+      labelFlags.length === 0
+        ? null
+        : labelFlags.includes(true) && !labelFlags.includes(false)
+          ? true
+          : labelFlags.includes(false) && !labelFlags.includes(true)
+            ? false
+            : null;
     const fromTrailer =
       trailers.length > 0 &&
-      (pr.commits ?? []).some((c) => c.message.split("\n").some((line) => trailers.some((t) => line.trim().toLowerCase().startsWith(t))))
+      (pr.commits ?? []).some((c) =>
+        c.message.split("\n").some((line) => trailers.some((t) => line.trim().toLowerCase().startsWith(t)))
+      )
         ? true
         : null;
     if (fromFile !== null && fromLabel !== null && fromFile !== fromLabel) conflicts++;
@@ -215,12 +250,12 @@ export function analyze(options: AnalyzeOptions): Report {
   if (closedNow.length === 0) limit("window-empty", "No PR closed in the window.", 1);
 
   // Context for revert detection: merged revert PRs anywhere in the export.
-  const revertedTitles = new Set(
-    valid
-      .filter((p) => p.mergedAt !== null)
-      .map((p) => REVERT_TITLE.exec(p.title)?.[1])
-      .filter((t): t is string => t !== undefined)
-  );
+  const revertedTitles = new Map<string, number>();
+  for (const p of valid) {
+    const target = REVERT_TITLE.exec(p.title)?.[1];
+    if (target === undefined || p.mergedAt === null) continue;
+    revertedTitles.set(target, Math.max(p.mergedAt, revertedTitles.get(target) ?? -Infinity));
+  }
   const ctx: MetricContext = { runsBySha, revertedTitles, reviewsExported, commitsExported };
 
   const segmentNames: SegmentName[] = ["all", "ai_assisted", "not_ai_assisted", "unknown_attribution"];
@@ -229,7 +264,10 @@ export function analyze(options: AnalyzeOptions): Report {
     const segments = Object.fromEntries(
       segmentNames.map((seg) => {
         const prs = seg === "all" ? base : base.filter((p) => segmentOf(p) === seg);
-        return [seg, toValue(def.compute(prs, ctx), def.unit, config.minSample, seg !== "all", options.audit)];
+        return [
+          seg,
+          toValue(def.compute(prs, ctx), def.unit, config.minSample, seg !== "all", options.audit),
+        ];
       })
     ) as Metric["segments"];
     const baseline =
@@ -254,7 +292,11 @@ export function analyze(options: AnalyzeOptions): Report {
       definition: def.definition,
       unit: def.unit,
       kind: def.kind,
-      status: segments.all.unavailable_reason === "field-not-exported" || segments.all.unavailable_reason === "input-not-provided" ? "unknown" : def.status,
+      status:
+        segments.all.unavailable_reason === "field-not-exported" ||
+        segments.all.unavailable_reason === "input-not-provided"
+          ? "unknown"
+          : def.status,
       anchor: def.anchor,
       segments,
       baseline,
@@ -281,8 +323,11 @@ export function analyze(options: AnalyzeOptions): Report {
       per_pr: round(total / prs, 2),
     }));
 
-  const times = population.flatMap((p) => [p.createdAt, p.closedAt, p.mergedAt]).filter((t): t is number => t !== null);
-  const iso = (t: number | null): string | null => (t === null ? null : new Date(t).toISOString().slice(0, 10));
+  const span = extent(
+    population.flatMap((p) => [p.createdAt, p.closedAt, p.mergedAt]).filter((t): t is number => t !== null)
+  );
+  const iso = (t: number | null): string | null =>
+    t === null ? null : new Date(t).toISOString().slice(0, 10);
   limitations.sort((a, b) => (a.code < b.code ? -1 : a.code > b.code ? 1 : 0));
   const counts = { ai: 0, not: 0, unknown: 0 };
   for (const pr of population) {
@@ -302,8 +347,8 @@ export function analyze(options: AnalyzeOptions): Report {
     window: {
       since: options.since,
       until: options.until,
-      observed_first: iso(times.length > 0 ? Math.min(...times) : null),
-      observed_last: iso(times.length > 0 ? Math.max(...times) : null),
+      observed_first: iso(span?.min ?? null),
+      observed_last: iso(span?.max ?? null),
       baseline_since: options.baselineSince,
       baseline_until: options.baselineUntil,
     },

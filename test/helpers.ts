@@ -9,7 +9,8 @@ import { run } from "../src/cli/run.js";
 import type { Report } from "../src/types.js";
 
 /** Absolute path of a fixture directory. */
-export const fixture = (name: string): string => fileURLToPath(new URL(`./fixtures/${name}`, import.meta.url));
+export const fixture = (name: string): string =>
+  fileURLToPath(new URL(`./fixtures/${name}`, import.meta.url));
 
 /** Result of an in-process CLI run. */
 export interface CliResult {

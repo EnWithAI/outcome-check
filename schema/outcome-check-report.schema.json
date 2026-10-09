@@ -1,0 +1,466 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/enwithai/outcome-check/schema/outcome-check-report.schema.json",
+  "title": "Outcome Check report",
+  "description": "Delivery-outcome metrics from exported data. Aggregates only: no identities. Only run_metadata.generated_at and duration_ms vary between identical runs.",
+  "$defs": {
+    "value": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "n",
+        "numerator",
+        "denominator",
+        "value",
+        "median",
+        "p75",
+        "p90",
+        "unavailable_reason",
+        "small_sample"
+      ],
+      "properties": {
+        "n": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "numerator": {
+          "type": ["integer", "null"],
+          "minimum": 0
+        },
+        "denominator": {
+          "type": ["integer", "null"],
+          "minimum": 0
+        },
+        "value": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "median": {
+          "type": ["number", "null"]
+        },
+        "p75": {
+          "type": ["number", "null"]
+        },
+        "p90": {
+          "type": ["number", "null"]
+        },
+        "unavailable_reason": {
+          "enum": [null, "no-data", "insufficient-sample", "field-not-exported", "input-not-provided"]
+        },
+        "small_sample": {
+          "type": "boolean"
+        },
+        "audit_numerator": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "audit_denominator": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
+      }
+    },
+    "input": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "records"],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "records": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "segment": {
+      "enum": ["all", "ai_assisted", "not_ai_assisted", "unknown_attribution"]
+    }
+  },
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "inputs",
+    "window",
+    "population",
+    "attribution",
+    "metrics",
+    "ai_cost",
+    "coverage_limitations",
+    "notices",
+    "run_metadata"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["prs", "runs", "attribution"],
+      "properties": {
+        "prs": {
+          "$ref": "#/$defs/input"
+        },
+        "runs": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/input"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "attribution": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/input"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "window": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["since", "until", "observed_first", "observed_last", "baseline_since", "baseline_until"],
+      "properties": {
+        "since": {
+          "type": ["string", "null"],
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "until": {
+          "type": ["string", "null"],
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "observed_first": {
+          "type": ["string", "null"],
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "observed_last": {
+          "type": ["string", "null"],
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "baseline_since": {
+          "type": ["string", "null"],
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "baseline_until": {
+          "type": ["string", "null"],
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        }
+      }
+    },
+    "population": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "records",
+        "invalid",
+        "duplicates",
+        "bots_excluded",
+        "drafts_excluded",
+        "label_excluded",
+        "open",
+        "closed_in_window",
+        "merged_in_window"
+      ],
+      "properties": {
+        "records": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "invalid": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "duplicates": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "bots_excluded": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "drafts_excluded": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "label_excluded": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "open": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "closed_in_window": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "merged_in_window": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "attribution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sources", "ai_assisted", "not_ai_assisted", "unknown", "conflicts", "unmatched_rows"],
+      "properties": {
+        "sources": {
+          "type": "array",
+          "items": {
+            "enum": ["file", "labels", "commit-trailers"]
+          }
+        },
+        "ai_assisted": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "not_ai_assisted": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unknown": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "conflicts": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unmatched_rows": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "metrics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "definition",
+          "unit",
+          "kind",
+          "status",
+          "anchor",
+          "segments",
+          "baseline",
+          "exclusions"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]+$"
+          },
+          "title": {
+            "type": "string"
+          },
+          "definition": {
+            "type": "string"
+          },
+          "unit": {
+            "enum": ["ratio", "hours", "lines"]
+          },
+          "kind": {
+            "enum": ["rate", "distribution"]
+          },
+          "status": {
+            "enum": ["verified_static_fact", "hypothesis", "unknown"],
+            "description": "verified_static_fact = computed directly from exported fields; hypothesis = proxy indicator; unknown = not computable from the provided inputs."
+          },
+          "anchor": {
+            "enum": ["closed", "merged"]
+          },
+          "segments": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["all", "ai_assisted", "not_ai_assisted", "unknown_attribution"],
+            "properties": {
+              "all": {
+                "$ref": "#/$defs/value"
+              },
+              "ai_assisted": {
+                "$ref": "#/$defs/value"
+              },
+              "not_ai_assisted": {
+                "$ref": "#/$defs/value"
+              },
+              "unknown_attribution": {
+                "$ref": "#/$defs/value"
+              }
+            }
+          },
+          "baseline": {
+            "anyOf": [
+              {
+                "$ref": "#/$defs/value"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "exclusions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["reason", "count"],
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "count": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "ai_cost": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["currency", "total", "prs_with_cost", "ai_assisted_merged", "per_pr"],
+        "properties": {
+          "currency": {
+            "type": "string",
+            "pattern": "^[A-Z]{3}$"
+          },
+          "total": {
+            "type": "number",
+            "minimum": 0
+          },
+          "prs_with_cost": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "ai_assisted_merged": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "per_pr": {
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "coverage_limitations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["code", "message", "count"],
+        "properties": {
+          "code": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "message": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "notices": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "run_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tool",
+        "tool_version",
+        "generated_at",
+        "duration_ms",
+        "node_version",
+        "config_source",
+        "min_sample",
+        "audit",
+        "network",
+        "executed_code",
+        "model_usage",
+        "identities_in_output"
+      ],
+      "properties": {
+        "tool": {
+          "const": "outcome-check"
+        },
+        "tool_version": {
+          "type": "string"
+        },
+        "generated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "duration_ms": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "node_version": {
+          "type": "string"
+        },
+        "config_source": {
+          "type": "string"
+        },
+        "min_sample": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "audit": {
+          "type": "boolean"
+        },
+        "network": {
+          "const": false
+        },
+        "executed_code": {
+          "const": false
+        },
+        "model_usage": {
+          "type": "null",
+          "description": "No model or paid API is used."
+        },
+        "identities_in_output": {
+          "const": false,
+          "description": "Logins, names, emails, titles and commit messages never appear in the report."
+        }
+      }
+    }
+  }
+}

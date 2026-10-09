@@ -8,10 +8,26 @@ import type { Anchor, MetricValue, Status } from "../types.js";
 
 const HOUR = 3_600_000;
 
-/** Rounds to a fixed number of decimals (half away from zero). */
+/**
+ * Rounds to a fixed number of decimals, half away from zero, on the decimal representation (so 1.005 → 1.01,
+ * which naive `Math.round(x * 100) / 100` gets wrong because of binary floating point).
+ */
 export function round(value: number, decimals: number): number {
-  const f = 10 ** decimals;
-  return (Math.sign(value) * Math.round(Math.abs(value) * f)) / f;
+  const shifted = Number(`${Math.abs(value)}e${decimals}`);
+  if (!Number.isFinite(shifted)) return Math.round(value * 10 ** decimals) / 10 ** decimals; // e.g. 1e-7
+  return Math.sign(value) * Number(`${Math.round(shifted)}e-${decimals}`);
+}
+
+/** Minimum and maximum without spreading into arguments (safe for very large arrays); null when empty. */
+export function extent(values: readonly number[]): { min: number; max: number } | null {
+  if (values.length === 0) return null;
+  let min = Infinity;
+  let max = -Infinity;
+  for (const v of values) {
+    if (v < min) min = v;
+    if (v > max) max = v;
+  }
+  return { min, max };
 }
 
 /** Median (mean of the two middle values for even n). Input need not be sorted. */
@@ -30,8 +46,8 @@ export function nearestRank(values: number[], p: number): number {
 /** Shared context for metric computation. */
 export interface MetricContext {
   runsBySha: Map<string, Run[]> | null;
-  /** Titles of merged PRs reverted by a merged `Revert "<title>"` PR anywhere in the export. */
-  revertedTitles: Set<string>;
+  /** Reverted title → latest merge time of a merged `Revert "<title>"` PR anywhere in the export. */
+  revertedTitles: Map<string, number>;
   reviewsExported: boolean;
   commitsExported: boolean;
 }
@@ -57,14 +73,16 @@ export interface MetricDef {
 /** Reviews by someone other than the PR author that were actually submitted. */
 function nonAuthorReviews(pr: PullRequest): { state: string; submittedAt: number }[] {
   return (pr.reviews ?? [])
-    .filter((r) => r.state !== "PENDING" && r.submittedAt !== null && (r.login === null || r.login !== pr.authorLogin))
+    .filter(
+      (r) =>
+        r.state !== "PENDING" && r.submittedAt !== null && (r.login === null || r.login !== pr.authorLogin)
+    )
     .map((r) => ({ state: r.state, submittedAt: r.submittedAt as number }));
 }
 
 /** Earliest non-author review time, or null. */
 function firstReview(pr: PullRequest): number | null {
-  const times = nonAuthorReviews(pr).map((r) => r.submittedAt);
-  return times.length > 0 ? Math.min(...times) : null;
+  return extent(nonAuthorReviews(pr).map((r) => r.submittedAt))?.min ?? null;
 }
 
 const IGNORED_CONCLUSIONS = new Set(["cancelled", "skipped", "neutral", "stale"]);
@@ -134,7 +152,9 @@ export const METRICS: MetricDef[] = [
         kind: "distribution",
         values: prs.flatMap((p) => {
           const first = firstReview(p);
-          return first === null || first < p.createdAt ? [] : [{ pr: p.number, value: (first - p.createdAt) / HOUR }];
+          return first === null || first < p.createdAt
+            ? []
+            : [{ pr: p.number, value: (first - p.createdAt) / HOUR }];
         }),
       };
     },
@@ -159,7 +179,8 @@ export const METRICS: MetricDef[] = [
   {
     id: "changes_requested_rate",
     title: "Changes requested (rework proxy)",
-    definition: "Merged PRs with at least one CHANGES_REQUESTED review ÷ merged PRs. A proxy for rework, not a quality score.",
+    definition:
+      "Merged PRs with at least one CHANGES_REQUESTED review ÷ merged PRs. A proxy for rework, not a quality score.",
     unit: "ratio",
     kind: "rate",
     status: "hypothesis",
@@ -185,12 +206,17 @@ export const METRICS: MetricDef[] = [
     status: "hypothesis",
     anchor: "merged",
     compute: (prs, ctx) => {
-      if (!ctx.reviewsExported || !ctx.commitsExported) return { kind: "unavailable", reason: "field-not-exported" };
+      if (!ctx.reviewsExported || !ctx.commitsExported)
+        return { kind: "unavailable", reason: "field-not-exported" };
       const reviewed = prs.filter((p) => firstReview(p) !== null);
       return {
         kind: "rate",
         numerator: reviewed
-          .filter((p) => (p.commits ?? []).some((c) => c.committedDate !== null && c.committedDate > (firstReview(p) as number)))
+          .filter((p) =>
+            (p.commits ?? []).some(
+              (c) => c.committedDate !== null && c.committedDate > (firstReview(p) as number)
+            )
+          )
           .map((p) => p.number),
         denominator: reviewed.map((p) => p.number),
       };
@@ -208,16 +234,23 @@ export const METRICS: MetricDef[] = [
     compute: (prs, ctx) => {
       if (ctx.runsBySha === null) return { kind: "unavailable", reason: "input-not-provided" };
       if (!ctx.commitsExported) return { kind: "unavailable", reason: "field-not-exported" };
-      const results = prs.map((p) => ({ pr: p.number, pass: firstPass(p, ctx.runsBySha as Map<string, Run[]>) }));
+      const results = prs.map((p) => ({
+        pr: p.number,
+        pass: firstPass(p, ctx.runsBySha as Map<string, Run[]>),
+      }));
       const linked = results.filter((r) => r.pass !== null);
-      return { kind: "rate", numerator: linked.filter((r) => r.pass).map((r) => r.pr), denominator: linked.map((r) => r.pr) };
+      return {
+        kind: "rate",
+        numerator: linked.filter((r) => r.pass).map((r) => r.pr),
+        denominator: linked.map((r) => r.pr),
+      };
     },
   },
   {
     id: "revert_rate",
     title: "Reverted PRs (proxy)",
     definition:
-      'Merged non-revert PRs whose exact title T is reverted by a merged PR titled Revert "T" anywhere in the export ÷ merged non-revert PRs. Only GitHub-style revert titles are detected.',
+      'Merged non-revert PRs whose exact title T is reverted by a later-merged PR titled Revert "T" anywhere in the export ÷ merged non-revert PRs. Only GitHub-style revert titles are detected.',
     unit: "ratio",
     kind: "rate",
     status: "hypothesis",
@@ -226,7 +259,9 @@ export const METRICS: MetricDef[] = [
       const candidates = prs.filter((p) => !REVERT_TITLE.test(p.title));
       return {
         kind: "rate",
-        numerator: candidates.filter((p) => ctx.revertedTitles.has(p.title)).map((p) => p.number),
+        numerator: candidates
+          .filter((p) => (ctx.revertedTitles.get(p.title) ?? -Infinity) > (p.mergedAt as number))
+          .map((p) => p.number),
         denominator: candidates.map((p) => p.number),
       };
     },
@@ -234,7 +269,8 @@ export const METRICS: MetricDef[] = [
   {
     id: "pr_size_lines",
     title: "PR size (lines changed)",
-    definition: "additions + deletions of merged PRs; median, p75, p90. Context for the other metrics, not an outcome.",
+    definition:
+      "additions + deletions of merged PRs; median, p75, p90. Context for the other metrics, not an outcome.",
     unit: "lines",
     kind: "distribution",
     status: "verified_static_fact",
@@ -291,7 +327,10 @@ export function toValue(
       unavailable_reason: null,
       small_sample: n < minSample,
       ...(audit
-        ? { audit_numerator: [...computed.numerator].sort((a, b) => a - b), audit_denominator: [...computed.denominator].sort((a, b) => a - b) }
+        ? {
+            audit_numerator: [...computed.numerator].sort((a, b) => a - b),
+            audit_denominator: [...computed.denominator].sort((a, b) => a - b),
+          }
         : {}),
     };
     if (n === 0) return { ...base, unavailable_reason: "no-data", small_sample: false };

@@ -1,0 +1,9 @@
+{
+  "attribution": {
+    "labels": { "ai-assisted": true, "human-only": false },
+    "commit_trailers": ["Co-Authored-By: Claude", "Generated-By:"]
+  },
+  "exclude_labels": ["dependencies"],
+  "include_bots": false,
+  "min_sample": 20
+}

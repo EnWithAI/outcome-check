@@ -69,13 +69,17 @@ export interface ReadFile {
 export function readInput(path: string, label: string): ReadFile {
   let buffer: Buffer;
   try {
-    if (statSync(path).size > INPUT_LIMITS.maxBytes) throw inputError(`${label} is larger than 100 MiB: ${path}`);
+    if (statSync(path).size > INPUT_LIMITS.maxBytes)
+      throw inputError(`${label} is larger than 100 MiB: ${path}`);
     buffer = readFileSync(path);
   } catch (error) {
     if (error instanceof Error && error.name === "OutcomeCheckError") throw error;
     throw inputError(`Cannot read ${label}: ${path}`);
   }
-  return { sha256: createHash("sha256").update(buffer).digest("hex"), text: buffer.toString("utf8").replace(/^﻿/, "") };
+  return {
+    sha256: createHash("sha256").update(buffer).digest("hex"),
+    text: buffer.toString("utf8").replace(/^\ufeff/, ""),
+  };
 }
 
 /** Parses a JSON array; throws an input error when the file is not a JSON array. */
@@ -87,8 +91,12 @@ export function parseJsonArray(text: string, label: string): unknown[] {
     throw inputError(`${label} is not valid JSON: ${(error as Error).message}`);
   }
   if (!Array.isArray(value))
-    throw inputError(`${label} must be a JSON array`, "Export with `gh pr list --json …` / `gh run list --json …`.");
-  if (value.length > INPUT_LIMITS.maxRecords) throw inputError(`${label} has more than ${INPUT_LIMITS.maxRecords} records`);
+    throw inputError(
+      `${label} must be a JSON array`,
+      "Export with `gh pr list --json …` / `gh run list --json …`."
+    );
+  if (value.length > INPUT_LIMITS.maxRecords)
+    throw inputError(`${label} has more than ${INPUT_LIMITS.maxRecords} records`);
   return value;
 }
 
@@ -100,7 +108,8 @@ function time(value: unknown): number | null | undefined {
   return Number.isNaN(ms) ? undefined : ms;
 }
 
-const isObject = (v: unknown): v is Record<string, unknown> => v !== null && typeof v === "object" && !Array.isArray(v);
+const isObject = (v: unknown): v is Record<string, unknown> =>
+  v !== null && typeof v === "object" && !Array.isArray(v);
 
 /** Validates one gh PR record; returns null when invalid. */
 export function toPullRequest(raw: unknown): PullRequest | null {
@@ -112,12 +121,15 @@ export function toPullRequest(raw: unknown): PullRequest | null {
   const createdAt = time(raw.createdAt);
   const closedAt = time(raw.closedAt);
   const mergedAt = time(raw.mergedAt);
-  if (createdAt === null || createdAt === undefined || closedAt === undefined || mergedAt === undefined) return null;
+  if (createdAt === null || createdAt === undefined || closedAt === undefined || mergedAt === undefined)
+    return null;
   if (state === "MERGED" && mergedAt === null) return null;
   const author = isObject(raw.author) ? raw.author : null;
   const login = typeof author?.login === "string" ? author.login : null;
   const labels = Array.isArray(raw.labels)
-    ? raw.labels.map((l) => (isObject(l) && typeof l.name === "string" ? l.name : null)).filter((l): l is string => l !== null)
+    ? raw.labels
+        .map((l) => (isObject(l) && typeof l.name === "string" ? l.name : null))
+        .filter((l): l is string => l !== null)
     : [];
   const additions = typeof raw.additions === "number" ? raw.additions : null;
   const deletions = typeof raw.deletions === "number" ? raw.deletions : null;
@@ -162,7 +174,8 @@ export function toPullRequest(raw: unknown): PullRequest | null {
 export function toRun(raw: unknown): Run | null {
   if (!isObject(raw)) return null;
   if (typeof raw.headSha !== "string" || !/^[0-9a-f]{7,64}$/i.test(raw.headSha)) return null;
-  const attempt = typeof raw.attempt === "number" && Number.isInteger(raw.attempt) && raw.attempt >= 1 ? raw.attempt : 1;
+  const attempt =
+    typeof raw.attempt === "number" && Number.isInteger(raw.attempt) && raw.attempt >= 1 ? raw.attempt : 1;
   return {
     headSha: raw.headSha.toLowerCase(),
     status: typeof raw.status === "string" ? raw.status.toLowerCase() : "",
@@ -214,7 +227,10 @@ export function parseAttribution(text: string, path: string): { rows: Attributio
     if (!header) throw inputError("--attribution CSV is empty");
     const columns = header.map((h) => h.trim().toLowerCase());
     if (!columns.includes("pr") || !columns.includes("ai_assisted"))
-      throw inputError("--attribution CSV needs the columns pr and ai_assisted", "Header example: pr,ai_assisted,cost,currency");
+      throw inputError(
+        "--attribution CSV needs the columns pr and ai_assisted",
+        "Header example: pr,ai_assisted,cost,currency"
+      );
     if (body.length > INPUT_LIMITS.maxRecords) throw inputError("--attribution has too many rows");
     records = body.map((cells) => Object.fromEntries(columns.map((c, i) => [c, (cells[i] ?? "").trim()])));
   }
@@ -224,7 +240,13 @@ export function parseAttribution(text: string, path: string): { rows: Attributio
     const pr = typeof r.pr === "number" ? r.pr : /^\d+$/.test(String(r.pr ?? "")) ? Number(r.pr) : NaN;
     const flag = r.ai_assisted;
     const ai =
-      flag === true || flag === "true" ? true : flag === false || flag === "false" ? false : flag === null || flag === undefined || flag === "" || flag === "unknown" ? null : undefined;
+      flag === true || flag === "true"
+        ? true
+        : flag === false || flag === "false"
+          ? false
+          : flag === null || flag === undefined || flag === "" || flag === "unknown"
+            ? null
+            : undefined;
     const costRaw = r.cost;
     const cost =
       costRaw === undefined || costRaw === null || costRaw === ""
@@ -234,8 +256,17 @@ export function parseAttribution(text: string, path: string): { rows: Attributio
           : /^\d+(\.\d+)?$/.test(String(costRaw))
             ? Number(costRaw)
             : NaN;
-    const currency = typeof r.currency === "string" && /^[A-Za-z]{3}$/.test(r.currency.trim()) ? r.currency.trim().toUpperCase() : null;
-    if (!Number.isInteger(pr) || pr < 1 || ai === undefined || Number.isNaN(cost) || (cost !== null && (cost < 0 || currency === null))) {
+    const currency =
+      typeof r.currency === "string" && /^[A-Za-z]{3}$/.test(r.currency.trim())
+        ? r.currency.trim().toUpperCase()
+        : null;
+    if (
+      !Number.isInteger(pr) ||
+      pr < 1 ||
+      ai === undefined ||
+      Number.isNaN(cost) ||
+      (cost !== null && (cost < 0 || currency === null))
+    ) {
       invalid++;
       continue;
     }

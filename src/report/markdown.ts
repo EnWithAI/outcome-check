@@ -26,7 +26,9 @@ export function renderMarkdown(report: Report, options: RenderOptions): string {
       ` · min_sample ${report.run_metadata.min_sample}`,
     ""
   );
-  out.push("| Records | Invalid | Duplicates | Bots excl. | Drafts excl. | Label excl. | Open | Closed in window | Merged in window |");
+  out.push(
+    "| Records | Invalid | Duplicates | Bots excl. | Drafts excl. | Label excl. | Open | Closed in window | Merged in window |"
+  );
   out.push("|---:|---:|---:|---:|---:|---:|---:|---:|---:|");
   out.push(
     `| ${p.records} | ${p.invalid} | ${p.duplicates} | ${p.bots_excluded} | ${p.drafts_excluded} | ${p.label_excluded} | ${p.open} | ${p.closed_in_window} | ${p.merged_in_window} |`,
@@ -41,10 +43,18 @@ export function renderMarkdown(report: Report, options: RenderOptions): string {
 
   out.push("## Metrics", "");
   const hasBaseline = report.metrics.some((m) => m.baseline !== null);
-  out.push(`| Metric | Status | ${Object.values(SEGMENT_LABELS).join(" | ")}${hasBaseline ? " | Baseline (all)" : ""} |`);
-  out.push(`|---|---|${Object.keys(SEGMENT_LABELS).map(() => "---").join("|")}${hasBaseline ? "|---" : ""}|`);
+  out.push(
+    `| Metric | Status | ${Object.values(SEGMENT_LABELS).join(" | ")}${hasBaseline ? " | Baseline (all)" : ""} |`
+  );
+  out.push(
+    `|---|---|${Object.keys(SEGMENT_LABELS)
+      .map(() => "---")
+      .join("|")}${hasBaseline ? "|---" : ""}|`
+  );
   for (const m of report.metrics) {
-    const cells = (Object.keys(SEGMENT_LABELS) as (keyof typeof SEGMENT_LABELS)[]).map((s) => formatValue(m, m.segments[s]));
+    const cells = (Object.keys(SEGMENT_LABELS) as (keyof typeof SEGMENT_LABELS)[]).map((s) =>
+      formatValue(m, m.segments[s])
+    );
     out.push(
       `| ${text(m.title)} | ${m.status === "hypothesis" ? "proxy" : m.status === "unknown" ? "unknown" : "measured"} | ${cells.join(" | ")}${hasBaseline ? ` | ${formatValue(m, m.baseline)}` : ""} |`
     );
@@ -65,13 +75,16 @@ export function renderMarkdown(report: Report, options: RenderOptions): string {
 
   out.push("## Data limitations", "");
   if (report.coverage_limitations.length === 0) out.push("None detected.");
-  for (const l of report.coverage_limitations) out.push(`- ${code(l.code)} (${l.count}) — ${text(l.message)}`);
+  for (const l of report.coverage_limitations)
+    out.push(`- ${code(l.code)} (${l.count}) — ${text(l.message)}`);
   out.push("");
   out.push(
     `<sub>Outcome Check ${text(report.run_metadata.tool_version)} · offline · inputs: ${code(report.inputs.prs.path)}` +
       (report.inputs.runs ? `, ${code(report.inputs.runs.path)}` : "") +
       (report.inputs.attribution ? `, ${code(report.inputs.attribution.path)}` : "") +
-      (options.branding ? " · Built by EnWithAI · Part of CrewPE Engineering Commons · [crewpe.ai](https://crewpe.ai)</sub>" : "</sub>"),
+      (options.branding
+        ? " · Built by EnWithAI · Part of CrewPE Engineering Commons · [crewpe.ai](https://crewpe.ai)</sub>"
+        : "</sub>"),
     ""
   );
   return out.join("\n");

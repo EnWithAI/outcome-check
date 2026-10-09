@@ -1,0 +1,6545 @@
+[
+  {
+    "number": 1,
+    "title": "Feature 1",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-18T00:00:00Z",
+    "closedAt": "2026-08-18T15:00:00Z",
+    "mergedAt": "2026-08-18T15:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 126,
+    "deletions": 3,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-08-18T05:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-18T14:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000001b808",
+        "committedDate": "2026-08-17T23:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "0000000000000000000000000000000000035121",
+        "committedDate": "2026-08-18T06:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Feature 2",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-04T03:00:00Z",
+    "closedAt": "2026-08-06T22:00:00Z",
+    "mergedAt": "2026-08-06T22:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [],
+    "additions": 7,
+    "deletions": 47,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000001d6f7",
+        "committedDate": "2026-08-04T02:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "0000000000000000000000000000000000037010",
+        "committedDate": "2026-08-05T00:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Feature 3",
+    "state": "OPEN",
+    "isDraft": false,
+    "createdAt": "2026-09-10T05:00:00Z",
+    "closedAt": null,
+    "mergedAt": null,
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [],
+    "additions": 113,
+    "deletions": 114,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000001f5e6",
+        "committedDate": "2026-09-10T04:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Feature 4",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-07T16:00:00Z",
+    "closedAt": "2026-09-08T07:00:00Z",
+    "mergedAt": "2026-09-08T07:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 133,
+    "deletions": 106,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-07T21:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000214d5",
+        "committedDate": "2026-09-07T15:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Feature 5",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-12T22:00:00Z",
+    "closedAt": "2026-09-14T03:00:00Z",
+    "mergedAt": "2026-09-14T03:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 243,
+    "deletions": 110,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-13T07:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000233c4",
+        "committedDate": "2026-09-12T21:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "Feature 6",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-15T02:00:00Z",
+    "closedAt": "2026-09-16T08:00:00Z",
+    "mergedAt": "2026-09-16T08:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 125,
+    "deletions": 5,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-09-15T11:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-16T07:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000252b3",
+        "committedDate": "2026-09-15T01:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "000000000000000000000000000000000003ebcc",
+        "committedDate": "2026-09-15T12:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "Feature 7",
+    "state": "CLOSED",
+    "isDraft": false,
+    "createdAt": "2026-09-25T18:00:00Z",
+    "closedAt": "2026-09-27T15:00:00Z",
+    "mergedAt": null,
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 186,
+    "deletions": 83,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-26T08:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000271a2",
+        "committedDate": "2026-09-25T17:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "Feature 8",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-01T08:00:00Z",
+    "closedAt": "2026-08-02T05:00:00Z",
+    "mergedAt": "2026-08-02T05:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 157,
+    "deletions": 45,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-01T14:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000029091",
+        "committedDate": "2026-08-01T07:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "Feature 9",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-27T09:00:00Z",
+    "closedAt": "2026-08-29T19:00:00Z",
+    "mergedAt": "2026-08-29T19:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 69,
+    "deletions": 86,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-08-28T02:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-29T18:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000002af80",
+        "committedDate": "2026-08-27T08:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "0000000000000000000000000000000000044899",
+        "committedDate": "2026-08-28T03:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "Feature 10",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-13T15:00:00Z",
+    "closedAt": "2026-08-14T19:00:00Z",
+    "mergedAt": "2026-08-14T19:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 145,
+    "deletions": 54,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-13T23:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000002ce6f",
+        "committedDate": "2026-08-13T14:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "Feature 11",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-06T16:00:00Z",
+    "closedAt": "2026-09-09T11:00:00Z",
+    "mergedAt": "2026-09-09T11:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [],
+    "additions": 250,
+    "deletions": 80,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-07T12:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000002ed5e",
+        "committedDate": "2026-09-06T15:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "Feature 12",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-03T20:00:00Z",
+    "closedAt": "2026-09-05T10:00:00Z",
+    "mergedAt": "2026-09-05T10:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 181,
+    "deletions": 36,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-09-04T07:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-05T09:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000030c4d",
+        "committedDate": "2026-09-03T19:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "000000000000000000000000000000000004a566",
+        "committedDate": "2026-09-04T08:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "title": "Feature 13",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-06T15:00:00Z",
+    "closedAt": "2026-08-08T07:00:00Z",
+    "mergedAt": "2026-08-08T07:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [],
+    "additions": 241,
+    "deletions": 29,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-07T03:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000032b3c",
+        "committedDate": "2026-08-06T14:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "title": "Feature 14",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-27T15:00:00Z",
+    "closedAt": "2026-08-29T13:00:00Z",
+    "mergedAt": "2026-08-29T13:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 64,
+    "deletions": 87,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-28T05:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000034a2b",
+        "committedDate": "2026-08-27T14:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "title": "Feature 15",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-15T00:00:00Z",
+    "closedAt": "2026-08-17T18:00:00Z",
+    "mergedAt": "2026-08-17T18:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 209,
+    "deletions": 110,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-15T20:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000003691a",
+        "committedDate": "2026-08-14T23:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 16,
+    "title": "Feature 16",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-28T02:00:00Z",
+    "closedAt": "2026-09-29T16:00:00Z",
+    "mergedAt": "2026-09-29T16:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 191,
+    "deletions": 21,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000038809",
+        "committedDate": "2026-09-28T01:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "title": "Feature 17",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-28T04:00:00Z",
+    "closedAt": "2026-08-29T15:00:00Z",
+    "mergedAt": "2026-08-29T15:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 66,
+    "deletions": 71,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-28T15:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000003a6f8",
+        "committedDate": "2026-08-28T03:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "title": "Feature 18",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-23T04:00:00Z",
+    "closedAt": "2026-08-24T15:00:00Z",
+    "mergedAt": "2026-08-24T15:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 73,
+    "deletions": 82,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-23T15:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000003c5e7",
+        "committedDate": "2026-08-23T03:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 19,
+    "title": "Feature 19",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-08T13:00:00Z",
+    "closedAt": "2026-09-09T13:00:00Z",
+    "mergedAt": "2026-09-09T13:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [],
+    "additions": 247,
+    "deletions": 49,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-09-08T20:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-09T12:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000003e4d6",
+        "committedDate": "2026-09-08T12:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "0000000000000000000000000000000000057def",
+        "committedDate": "2026-09-08T21:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "Feature 20",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-15T00:00:00Z",
+    "closedAt": "2026-09-17T05:00:00Z",
+    "mergedAt": "2026-09-17T05:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 245,
+    "deletions": 95,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-15T16:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000403c5",
+        "committedDate": "2026-09-14T23:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 21,
+    "title": "Feature 21",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-05T00:00:00Z",
+    "closedAt": "2026-08-06T10:00:00Z",
+    "mergedAt": "2026-08-06T10:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 190,
+    "deletions": 73,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-05T10:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000422b4",
+        "committedDate": "2026-08-04T23:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 22,
+    "title": "Feature 22",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-09T16:00:00Z",
+    "closedAt": "2026-08-11T02:00:00Z",
+    "mergedAt": "2026-08-11T02:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 43,
+    "deletions": 19,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-10T02:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000441a3",
+        "committedDate": "2026-08-09T15:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 23,
+    "title": "Feature 23",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-02T16:00:00Z",
+    "closedAt": "2026-08-04T05:00:00Z",
+    "mergedAt": "2026-08-04T05:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 32,
+    "deletions": 114,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-08-03T03:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-04T04:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000046092",
+        "committedDate": "2026-08-02T15:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "000000000000000000000000000000000005f9ab",
+        "committedDate": "2026-08-03T04:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 24,
+    "title": "Feature 24",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-03T12:00:00Z",
+    "closedAt": "2026-09-04T17:00:00Z",
+    "mergedAt": "2026-09-04T17:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 232,
+    "deletions": 89,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-03T21:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000047f81",
+        "committedDate": "2026-09-03T11:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 25,
+    "title": "Feature 25",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-02T11:00:00Z",
+    "closedAt": "2026-08-02T23:00:00Z",
+    "mergedAt": "2026-08-02T23:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 98,
+    "deletions": 34,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-02T15:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000049e70",
+        "committedDate": "2026-08-02T10:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 26,
+    "title": "Feature 26",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-28T04:00:00Z",
+    "closedAt": "2026-08-29T03:00:00Z",
+    "mergedAt": "2026-08-29T03:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 21,
+    "deletions": 93,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-08-28T11:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-29T02:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000004bd5f",
+        "committedDate": "2026-08-28T03:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "0000000000000000000000000000000000065678",
+        "committedDate": "2026-08-28T12:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 27,
+    "title": "Feature 27",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-17T01:00:00Z",
+    "closedAt": "2026-09-18T19:00:00Z",
+    "mergedAt": "2026-09-18T19:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 150,
+    "deletions": 43,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-17T14:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000004dc4e",
+        "committedDate": "2026-09-17T00:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 28,
+    "title": "Feature 28",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-02T15:00:00Z",
+    "closedAt": "2026-09-03T14:00:00Z",
+    "mergedAt": "2026-09-03T14:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 59,
+    "deletions": 74,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-02T22:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000004fb3d",
+        "committedDate": "2026-09-02T14:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 29,
+    "title": "Feature 29",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-08T23:00:00Z",
+    "closedAt": "2026-09-09T16:00:00Z",
+    "mergedAt": "2026-09-09T16:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 94,
+    "deletions": 20,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-09T04:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000051a2c",
+        "committedDate": "2026-09-08T22:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 30,
+    "title": "Feature 30",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-20T23:00:00Z",
+    "closedAt": "2026-08-22T08:00:00Z",
+    "mergedAt": "2026-08-22T08:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 90,
+    "deletions": 4,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-08-21T09:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-22T07:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000005391b",
+        "committedDate": "2026-08-20T22:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "000000000000000000000000000000000006d234",
+        "committedDate": "2026-08-21T10:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 31,
+    "title": "Feature 31",
+    "state": "OPEN",
+    "isDraft": true,
+    "createdAt": "2026-09-20T07:00:00Z",
+    "closedAt": null,
+    "mergedAt": null,
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [],
+    "additions": 298,
+    "deletions": 37,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000005580a",
+        "committedDate": "2026-09-20T06:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "000000000000000000000000000000000006f123",
+        "committedDate": "2026-09-20T12:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 32,
+    "title": "Feature 32",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-16T16:00:00Z",
+    "closedAt": "2026-09-17T20:00:00Z",
+    "mergedAt": "2026-09-17T20:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 285,
+    "deletions": 94,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-17T00:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000576f9",
+        "committedDate": "2026-09-16T15:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 33,
+    "title": "Feature 33",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-04T17:00:00Z",
+    "closedAt": "2026-09-05T03:00:00Z",
+    "mergedAt": "2026-09-05T03:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 163,
+    "deletions": 79,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-09-04T20:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-05T02:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000595e8",
+        "committedDate": "2026-09-04T16:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "0000000000000000000000000000000000072f01",
+        "committedDate": "2026-09-04T21:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 34,
+    "title": "Feature 34",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-13T07:00:00Z",
+    "closedAt": "2026-09-15T22:00:00Z",
+    "mergedAt": "2026-09-15T22:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 157,
+    "deletions": 42,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-14T02:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000005b4d7",
+        "committedDate": "2026-09-13T06:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 35,
+    "title": "Feature 35",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-02T11:00:00Z",
+    "closedAt": "2026-09-03T18:00:00Z",
+    "mergedAt": "2026-09-03T18:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 64,
+    "deletions": 117,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-02T20:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000005d3c6",
+        "committedDate": "2026-09-02T10:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 36,
+    "title": "Feature 36",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-03T01:00:00Z",
+    "closedAt": "2026-09-05T02:00:00Z",
+    "mergedAt": "2026-09-05T02:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 144,
+    "deletions": 94,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-03T16:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000005f2b5",
+        "committedDate": "2026-09-03T00:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 37,
+    "title": "Feature 37",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-22T21:00:00Z",
+    "closedAt": "2026-08-23T23:00:00Z",
+    "mergedAt": "2026-08-23T23:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [],
+    "additions": 59,
+    "deletions": 96,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-23T05:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000611a4",
+        "committedDate": "2026-08-22T20:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 38,
+    "title": "Feature 38",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-09T00:00:00Z",
+    "closedAt": "2026-08-10T12:00:00Z",
+    "mergedAt": "2026-08-10T12:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 102,
+    "deletions": 85,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-09T11:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000063093",
+        "committedDate": "2026-08-08T23:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 39,
+    "title": "Feature 39",
+    "state": "CLOSED",
+    "isDraft": false,
+    "createdAt": "2026-08-09T17:00:00Z",
+    "closedAt": "2026-08-11T16:00:00Z",
+    "mergedAt": null,
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 73,
+    "deletions": 82,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-08-10T07:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-11T15:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000064f82",
+        "committedDate": "2026-08-09T16:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "000000000000000000000000000000000007e89b",
+        "committedDate": "2026-08-10T08:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 40,
+    "title": "Feature 40",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-02T12:00:00Z",
+    "closedAt": "2026-09-03T12:00:00Z",
+    "mergedAt": "2026-09-03T12:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 34,
+    "deletions": 118,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-02T19:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000066e71",
+        "committedDate": "2026-09-02T11:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 41,
+    "title": "Feature 41",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-15T19:00:00Z",
+    "closedAt": "2026-09-17T22:00:00Z",
+    "mergedAt": "2026-09-17T22:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [],
+    "additions": 78,
+    "deletions": 26,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-16T10:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000068d60",
+        "committedDate": "2026-09-15T18:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 42,
+    "title": "Feature 42",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-24T09:00:00Z",
+    "closedAt": "2026-08-27T04:00:00Z",
+    "mergedAt": "2026-08-27T04:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 23,
+    "deletions": 4,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-25T05:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000006ac4f",
+        "committedDate": "2026-08-24T08:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 43,
+    "title": "Feature 43",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-26T10:00:00Z",
+    "closedAt": "2026-09-28T00:00:00Z",
+    "mergedAt": "2026-09-28T00:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 239,
+    "deletions": 66,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-26T21:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000006cb3e",
+        "committedDate": "2026-09-26T09:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 44,
+    "title": "Feature 44",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-19T21:00:00Z",
+    "closedAt": "2026-08-21T15:00:00Z",
+    "mergedAt": "2026-08-21T15:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 179,
+    "deletions": 75,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-20T10:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000006ea2d",
+        "committedDate": "2026-08-19T20:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 45,
+    "title": "Feature 45",
+    "state": "OPEN",
+    "isDraft": true,
+    "createdAt": "2026-09-26T05:00:00Z",
+    "closedAt": null,
+    "mergedAt": null,
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 6,
+    "deletions": 55,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000007091c",
+        "committedDate": "2026-09-26T04:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 46,
+    "title": "Feature 46",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-17T04:00:00Z",
+    "closedAt": "2026-08-18T10:00:00Z",
+    "mergedAt": "2026-08-18T10:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 212,
+    "deletions": 78,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-08-17T13:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-18T09:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000007280b",
+        "committedDate": "2026-08-17T03:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "000000000000000000000000000000000008c124",
+        "committedDate": "2026-08-17T14:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 47,
+    "title": "Feature 47",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-16T20:00:00Z",
+    "closedAt": "2026-09-19T07:00:00Z",
+    "mergedAt": "2026-09-19T07:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [],
+    "additions": 168,
+    "deletions": 24,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-17T14:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000746fa",
+        "committedDate": "2026-09-16T19:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 48,
+    "title": "Feature 48",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-05T06:00:00Z",
+    "closedAt": "2026-09-07T04:00:00Z",
+    "mergedAt": "2026-09-07T04:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 39,
+    "deletions": 17,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-05T20:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000765e9",
+        "committedDate": "2026-09-05T05:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 49,
+    "title": "Feature 49",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-25T16:00:00Z",
+    "closedAt": "2026-08-27T00:00:00Z",
+    "mergedAt": "2026-08-27T00:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 73,
+    "deletions": 44,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-26T02:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000784d8",
+        "committedDate": "2026-08-25T15:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 50,
+    "title": "Feature 50",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-19T17:00:00Z",
+    "closedAt": "2026-09-20T06:00:00Z",
+    "mergedAt": "2026-09-20T06:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 131,
+    "deletions": 55,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-19T21:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000007a3c7",
+        "committedDate": "2026-09-19T16:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 51,
+    "title": "Feature 51",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-05T03:00:00Z",
+    "closedAt": "2026-08-07T18:00:00Z",
+    "mergedAt": "2026-08-07T18:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [],
+    "additions": 134,
+    "deletions": 79,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-05T22:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000007c2b6",
+        "committedDate": "2026-08-05T02:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 52,
+    "title": "Feature 52",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-17T16:00:00Z",
+    "closedAt": "2026-08-18T11:00:00Z",
+    "mergedAt": "2026-08-18T11:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 151,
+    "deletions": 22,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-08-17T22:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-18T10:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000007e1a5",
+        "committedDate": "2026-08-17T15:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "0000000000000000000000000000000000097abe",
+        "committedDate": "2026-08-17T23:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 53,
+    "title": "Feature 53",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-29T05:00:00Z",
+    "closedAt": "2026-08-31T13:00:00Z",
+    "mergedAt": "2026-08-31T13:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 81,
+    "deletions": 75,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000080094",
+        "committedDate": "2026-08-29T04:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 54,
+    "title": "Feature 54",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-06T07:00:00Z",
+    "closedAt": "2026-09-08T07:00:00Z",
+    "mergedAt": "2026-09-08T07:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 293,
+    "deletions": 66,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-06T21:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000081f83",
+        "committedDate": "2026-09-06T06:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 55,
+    "title": "Feature 55",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-17T18:00:00Z",
+    "closedAt": "2026-09-19T11:00:00Z",
+    "mergedAt": "2026-09-19T11:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 260,
+    "deletions": 60,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-18T06:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000083e72",
+        "committedDate": "2026-09-17T17:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 56,
+    "title": "Feature 56",
+    "state": "OPEN",
+    "isDraft": false,
+    "createdAt": "2026-08-04T13:00:00Z",
+    "closedAt": null,
+    "mergedAt": null,
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [],
+    "additions": 20,
+    "deletions": 66,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000085d61",
+        "committedDate": "2026-08-04T12:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "000000000000000000000000000000000009f67a",
+        "committedDate": "2026-08-05T05:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 57,
+    "title": "Feature 57",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-26T17:00:00Z",
+    "closedAt": "2026-09-27T21:00:00Z",
+    "mergedAt": "2026-09-27T21:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 54,
+    "deletions": 84,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-27T01:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000087c50",
+        "committedDate": "2026-09-26T16:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 58,
+    "title": "Feature 58",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-06T23:00:00Z",
+    "closedAt": "2026-08-08T12:00:00Z",
+    "mergedAt": "2026-08-08T12:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 161,
+    "deletions": 28,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-07T10:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000089b3f",
+        "committedDate": "2026-08-06T22:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 59,
+    "title": "Feature 59",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-03T04:00:00Z",
+    "closedAt": "2026-09-04T04:00:00Z",
+    "mergedAt": "2026-09-04T04:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [],
+    "additions": 260,
+    "deletions": 76,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000008ba2e",
+        "committedDate": "2026-09-03T03:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 60,
+    "title": "Feature 60",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-07T01:00:00Z",
+    "closedAt": "2026-09-07T10:00:00Z",
+    "mergedAt": "2026-09-07T10:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 83,
+    "deletions": 45,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-07T04:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000008d91d",
+        "committedDate": "2026-09-07T00:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 61,
+    "title": "Feature 61",
+    "state": "OPEN",
+    "isDraft": false,
+    "createdAt": "2026-09-13T13:00:00Z",
+    "closedAt": null,
+    "mergedAt": null,
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 264,
+    "deletions": 102,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000008f80c",
+        "committedDate": "2026-09-13T12:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 62,
+    "title": "Feature 62",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-02T13:00:00Z",
+    "closedAt": "2026-09-04T00:00:00Z",
+    "mergedAt": "2026-09-04T00:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 244,
+    "deletions": 50,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-03T00:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000916fb",
+        "committedDate": "2026-09-02T12:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 63,
+    "title": "Feature 63",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-03T14:00:00Z",
+    "closedAt": "2026-08-04T14:00:00Z",
+    "mergedAt": "2026-08-04T14:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 64,
+    "deletions": 30,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-03T21:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000935ea",
+        "committedDate": "2026-08-03T13:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 64,
+    "title": "Feature 64",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-12T19:00:00Z",
+    "closedAt": "2026-08-13T20:00:00Z",
+    "mergedAt": "2026-08-13T20:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 60,
+    "deletions": 74,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000954d9",
+        "committedDate": "2026-08-12T18:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 65,
+    "title": "Feature 65",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-06T08:00:00Z",
+    "closedAt": "2026-09-07T20:00:00Z",
+    "mergedAt": "2026-09-07T20:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [],
+    "additions": 168,
+    "deletions": 17,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-06T19:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000973c8",
+        "committedDate": "2026-09-06T07:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 66,
+    "title": "Feature 66",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-03T10:00:00Z",
+    "closedAt": "2026-09-06T04:00:00Z",
+    "mergedAt": "2026-09-06T04:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [],
+    "additions": 104,
+    "deletions": 97,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-09-04T06:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-06T03:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000992b7",
+        "committedDate": "2026-09-03T09:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "00000000000000000000000000000000000b2bd0",
+        "committedDate": "2026-09-04T07:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 67,
+    "title": "Feature 67",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-23T03:00:00Z",
+    "closedAt": "2026-09-23T22:00:00Z",
+    "mergedAt": "2026-09-23T22:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 290,
+    "deletions": 114,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-23T09:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000009b1a6",
+        "committedDate": "2026-09-23T02:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 68,
+    "title": "Feature 68",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-18T23:00:00Z",
+    "closedAt": "2026-08-20T04:00:00Z",
+    "mergedAt": "2026-08-20T04:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 66,
+    "deletions": 86,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-08-19T08:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-20T03:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000009d095",
+        "committedDate": "2026-08-18T22:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "00000000000000000000000000000000000b69ae",
+        "committedDate": "2026-08-19T09:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 69,
+    "title": "Feature 69",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-20T02:00:00Z",
+    "closedAt": "2026-09-21T23:00:00Z",
+    "mergedAt": "2026-09-21T23:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 103,
+    "deletions": 17,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-09-20T16:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-21T22:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000009ef84",
+        "committedDate": "2026-09-20T01:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "00000000000000000000000000000000000b889d",
+        "committedDate": "2026-09-20T17:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 70,
+    "title": "Feature 70",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-12T09:00:00Z",
+    "closedAt": "2026-09-13T14:00:00Z",
+    "mergedAt": "2026-09-13T14:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 284,
+    "deletions": 25,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-12T18:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000a0e73",
+        "committedDate": "2026-09-12T08:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 71,
+    "title": "Feature 71",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-31T04:00:00Z",
+    "closedAt": "2026-08-31T12:00:00Z",
+    "mergedAt": "2026-08-31T12:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 302,
+    "deletions": 92,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-31T06:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000a2d62",
+        "committedDate": "2026-08-31T03:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 72,
+    "title": "Feature 72",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-26T18:00:00Z",
+    "closedAt": "2026-08-28T06:00:00Z",
+    "mergedAt": "2026-08-28T06:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [],
+    "additions": 103,
+    "deletions": 47,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000a4c51",
+        "committedDate": "2026-08-26T17:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 73,
+    "title": "Feature 73",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-17T06:00:00Z",
+    "closedAt": "2026-09-19T20:00:00Z",
+    "mergedAt": "2026-09-19T20:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [],
+    "additions": 243,
+    "deletions": 24,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-09-18T01:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-19T19:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000a6b40",
+        "committedDate": "2026-09-17T05:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "00000000000000000000000000000000000c0459",
+        "committedDate": "2026-09-18T02:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 74,
+    "title": "Feature 74",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-22T02:00:00Z",
+    "closedAt": "2026-09-22T21:00:00Z",
+    "mergedAt": "2026-09-22T21:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 83,
+    "deletions": 21,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-09-22T08:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-22T20:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000a8a2f",
+        "committedDate": "2026-09-22T01:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "00000000000000000000000000000000000c2348",
+        "committedDate": "2026-09-22T09:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 75,
+    "title": "Feature 75",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-13T00:00:00Z",
+    "closedAt": "2026-09-14T15:00:00Z",
+    "mergedAt": "2026-09-14T15:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 180,
+    "deletions": 102,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-13T12:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000aa91e",
+        "committedDate": "2026-09-12T23:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 76,
+    "title": "Feature 76",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-25T01:00:00Z",
+    "closedAt": "2026-09-26T06:00:00Z",
+    "mergedAt": "2026-09-26T06:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 297,
+    "deletions": 38,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-09-25T10:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-26T05:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000ac80d",
+        "committedDate": "2026-09-25T00:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "00000000000000000000000000000000000c6126",
+        "committedDate": "2026-09-25T11:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 77,
+    "title": "Revert \"Feature 41\"",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-18T22:00:00Z",
+    "closedAt": "2026-09-20T11:00:00Z",
+    "mergedAt": "2026-09-20T11:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 225,
+    "deletions": 107,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-19T09:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000ae6fc",
+        "committedDate": "2026-09-18T21:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 78,
+    "title": "Feature 78",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-28T01:00:00Z",
+    "closedAt": "2026-09-28T11:00:00Z",
+    "mergedAt": "2026-09-28T11:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 130,
+    "deletions": 6,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-28T04:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000b05eb",
+        "committedDate": "2026-09-28T00:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 79,
+    "title": "Feature 79",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-15T19:00:00Z",
+    "closedAt": "2026-08-16T17:00:00Z",
+    "mergedAt": "2026-08-16T17:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 251,
+    "deletions": 82,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-16T02:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000b24da",
+        "committedDate": "2026-08-15T18:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 80,
+    "title": "Feature 80",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-23T17:00:00Z",
+    "closedAt": "2026-09-25T15:00:00Z",
+    "mergedAt": "2026-09-25T15:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 86,
+    "deletions": 37,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-09-24T07:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-25T14:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000b43c9",
+        "committedDate": "2026-09-23T16:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "00000000000000000000000000000000000cdce2",
+        "committedDate": "2026-09-24T08:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 81,
+    "title": "Feature 81",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-16T07:00:00Z",
+    "closedAt": "2026-09-17T21:00:00Z",
+    "mergedAt": "2026-09-17T21:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 253,
+    "deletions": 89,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-16T18:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000b62b8",
+        "committedDate": "2026-09-16T06:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 82,
+    "title": "Feature 82",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-20T00:00:00Z",
+    "closedAt": "2026-09-20T15:00:00Z",
+    "mergedAt": "2026-09-20T15:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 170,
+    "deletions": 39,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000b81a7",
+        "committedDate": "2026-09-19T23:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "00000000000000000000000000000000000d1ac0",
+        "committedDate": "2026-09-20T06:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 83,
+    "title": "Feature 83",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-13T01:00:00Z",
+    "closedAt": "2026-08-15T15:00:00Z",
+    "mergedAt": "2026-08-15T15:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 196,
+    "deletions": 86,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-13T20:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000ba096",
+        "committedDate": "2026-08-13T00:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 84,
+    "title": "Feature 84",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-07T15:00:00Z",
+    "closedAt": "2026-09-08T19:00:00Z",
+    "mergedAt": "2026-09-08T19:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 49,
+    "deletions": 85,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-07T23:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000bbf85",
+        "committedDate": "2026-09-07T14:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 85,
+    "title": "Feature 85",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-14T17:00:00Z",
+    "closedAt": "2026-09-15T00:00:00Z",
+    "mergedAt": "2026-09-15T00:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 265,
+    "deletions": 6,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-09-14T19:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-14T23:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000bde74",
+        "committedDate": "2026-09-14T16:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "00000000000000000000000000000000000d778d",
+        "committedDate": "2026-09-14T20:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 86,
+    "title": "Feature 86",
+    "state": "CLOSED",
+    "isDraft": false,
+    "createdAt": "2026-08-25T00:00:00Z",
+    "closedAt": "2026-08-27T11:00:00Z",
+    "mergedAt": null,
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 179,
+    "deletions": 70,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-25T18:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000bfd63",
+        "committedDate": "2026-08-24T23:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 87,
+    "title": "Feature 87",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-06T08:00:00Z",
+    "closedAt": "2026-08-08T04:00:00Z",
+    "mergedAt": "2026-08-08T04:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 55,
+    "deletions": 32,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-06T21:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000c1c52",
+        "committedDate": "2026-08-06T07:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 88,
+    "title": "Feature 88",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-06T12:00:00Z",
+    "closedAt": "2026-09-07T20:00:00Z",
+    "mergedAt": "2026-09-07T20:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 56,
+    "deletions": 44,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-06T22:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000c3b41",
+        "committedDate": "2026-09-06T11:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 89,
+    "title": "Feature 89",
+    "state": "CLOSED",
+    "isDraft": false,
+    "createdAt": "2026-08-07T04:00:00Z",
+    "closedAt": "2026-08-08T09:00:00Z",
+    "mergedAt": null,
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 303,
+    "deletions": 31,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-08-07T13:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-08T08:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000c5a30",
+        "committedDate": "2026-08-07T03:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "00000000000000000000000000000000000df349",
+        "committedDate": "2026-08-07T14:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 90,
+    "title": "Feature 90",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-21T07:00:00Z",
+    "closedAt": "2026-09-22T00:00:00Z",
+    "mergedAt": "2026-09-22T00:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 237,
+    "deletions": 82,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-21T12:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000c791f",
+        "committedDate": "2026-09-21T06:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 91,
+    "title": "Feature 91",
+    "state": "CLOSED",
+    "isDraft": false,
+    "createdAt": "2026-08-26T21:00:00Z",
+    "closedAt": "2026-08-28T09:00:00Z",
+    "mergedAt": null,
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [],
+    "additions": 135,
+    "deletions": 47,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-27T08:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000c980e",
+        "committedDate": "2026-08-26T20:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 92,
+    "title": "Feature 92",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-14T15:00:00Z",
+    "closedAt": "2026-08-16T08:00:00Z",
+    "mergedAt": "2026-08-16T08:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 16,
+    "deletions": 33,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-15T03:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000cb6fd",
+        "committedDate": "2026-08-14T14:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 93,
+    "title": "Feature 93",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-27T07:00:00Z",
+    "closedAt": "2026-08-28T20:00:00Z",
+    "mergedAt": "2026-08-28T20:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 67,
+    "deletions": 33,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000cd5ec",
+        "committedDate": "2026-08-27T06:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 94,
+    "title": "Feature 94",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-27T02:00:00Z",
+    "closedAt": "2026-09-28T20:00:00Z",
+    "mergedAt": "2026-09-28T20:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 82,
+    "deletions": 17,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-27T15:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000cf4db",
+        "committedDate": "2026-09-27T01:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 95,
+    "title": "Feature 95",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-21T04:00:00Z",
+    "closedAt": "2026-08-22T16:00:00Z",
+    "mergedAt": "2026-08-22T16:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 215,
+    "deletions": 34,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-08-21T15:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-22T15:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000d13ca",
+        "committedDate": "2026-08-21T03:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "00000000000000000000000000000000000eace3",
+        "committedDate": "2026-08-21T16:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 96,
+    "title": "Feature 96",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-20T19:00:00Z",
+    "closedAt": "2026-09-21T07:00:00Z",
+    "mergedAt": "2026-09-21T07:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [],
+    "additions": 135,
+    "deletions": 17,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-09-20T23:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-21T06:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000d32b9",
+        "committedDate": "2026-09-20T18:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "00000000000000000000000000000000000ecbd2",
+        "committedDate": "2026-09-21T00:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 97,
+    "title": "Feature 97",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-29T05:00:00Z",
+    "closedAt": "2026-08-30T23:00:00Z",
+    "mergedAt": "2026-08-30T23:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [],
+    "additions": 282,
+    "deletions": 26,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-08-29T18:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-30T22:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000d51a8",
+        "committedDate": "2026-08-29T04:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "00000000000000000000000000000000000eeac1",
+        "committedDate": "2026-08-29T19:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 98,
+    "title": "Feature 98",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-29T09:00:00Z",
+    "closedAt": "2026-08-29T19:00:00Z",
+    "mergedAt": "2026-08-29T19:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [],
+    "additions": 61,
+    "deletions": 45,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-29T12:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000d7097",
+        "committedDate": "2026-08-29T08:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 99,
+    "title": "Feature 99",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-01T16:00:00Z",
+    "closedAt": "2026-09-03T08:00:00Z",
+    "mergedAt": "2026-09-03T08:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 146,
+    "deletions": 113,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000d8f86",
+        "committedDate": "2026-09-01T15:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 100,
+    "title": "Feature 100",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-05T10:00:00Z",
+    "closedAt": "2026-09-07T01:00:00Z",
+    "mergedAt": "2026-09-07T01:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 194,
+    "deletions": 112,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-05T22:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000dae75",
+        "committedDate": "2026-09-05T09:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 101,
+    "title": "Feature 101",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-03T05:00:00Z",
+    "closedAt": "2026-09-03T18:00:00Z",
+    "mergedAt": "2026-09-03T18:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 249,
+    "deletions": 96,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-03T09:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000dcd64",
+        "committedDate": "2026-09-03T04:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 102,
+    "title": "Feature 102",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-18T20:00:00Z",
+    "closedAt": "2026-09-20T01:00:00Z",
+    "mergedAt": "2026-09-20T01:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 113,
+    "deletions": 50,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-19T05:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000dec53",
+        "committedDate": "2026-09-18T19:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 103,
+    "title": "Feature 103",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-10T12:00:00Z",
+    "closedAt": "2026-08-12T10:00:00Z",
+    "mergedAt": "2026-08-12T10:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 278,
+    "deletions": 80,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000e0b42",
+        "committedDate": "2026-08-10T11:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 104,
+    "title": "Feature 104",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-07T18:00:00Z",
+    "closedAt": "2026-08-09T10:00:00Z",
+    "mergedAt": "2026-08-09T10:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 46,
+    "deletions": 94,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-08-08T06:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-09T09:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000e2a31",
+        "committedDate": "2026-08-07T17:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "00000000000000000000000000000000000fc34a",
+        "committedDate": "2026-08-08T07:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 105,
+    "title": "Feature 105",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-19T14:00:00Z",
+    "closedAt": "2026-08-22T10:00:00Z",
+    "mergedAt": "2026-08-22T10:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 62,
+    "deletions": 35,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-20T10:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000e4920",
+        "committedDate": "2026-08-19T13:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 106,
+    "title": "Feature 106",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-14T14:00:00Z",
+    "closedAt": "2026-09-16T11:00:00Z",
+    "mergedAt": "2026-09-16T11:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [],
+    "additions": 184,
+    "deletions": 38,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-15T04:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000e680f",
+        "committedDate": "2026-09-14T13:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 107,
+    "title": "Feature 107",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-20T19:00:00Z",
+    "closedAt": "2026-09-23T05:00:00Z",
+    "mergedAt": "2026-09-23T05:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 172,
+    "deletions": 64,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-21T12:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000e86fe",
+        "committedDate": "2026-09-20T18:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 108,
+    "title": "Feature 108",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-15T12:00:00Z",
+    "closedAt": "2026-09-17T18:00:00Z",
+    "mergedAt": "2026-09-17T18:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 236,
+    "deletions": 42,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-16T04:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000ea5ed",
+        "committedDate": "2026-09-15T11:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 109,
+    "title": "Feature 109",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-25T10:00:00Z",
+    "closedAt": "2026-08-26T16:00:00Z",
+    "mergedAt": "2026-08-26T16:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 38,
+    "deletions": 44,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-25T19:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000ec4dc",
+        "committedDate": "2026-08-25T09:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 110,
+    "title": "Feature 110",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-14T07:00:00Z",
+    "closedAt": "2026-08-14T15:00:00Z",
+    "mergedAt": "2026-08-14T15:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 71,
+    "deletions": 113,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-08-14T09:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-14T14:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000ee3cb",
+        "committedDate": "2026-08-14T06:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "0000000000000000000000000000000000107ce4",
+        "committedDate": "2026-08-14T10:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 111,
+    "title": "Feature 111",
+    "state": "CLOSED",
+    "isDraft": false,
+    "createdAt": "2026-09-06T14:00:00Z",
+    "closedAt": "2026-09-06T23:00:00Z",
+    "mergedAt": null,
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 219,
+    "deletions": 11,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-06T17:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000f02ba",
+        "committedDate": "2026-09-06T13:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 112,
+    "title": "Feature 112",
+    "state": "CLOSED",
+    "isDraft": false,
+    "createdAt": "2026-08-02T22:00:00Z",
+    "closedAt": "2026-08-03T21:00:00Z",
+    "mergedAt": null,
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 292,
+    "deletions": 41,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-03T05:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000f21a9",
+        "committedDate": "2026-08-02T21:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 113,
+    "title": "Feature 113",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-22T19:00:00Z",
+    "closedAt": "2026-09-25T11:00:00Z",
+    "mergedAt": "2026-09-25T11:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [],
+    "additions": 201,
+    "deletions": 53,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-23T14:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000f4098",
+        "committedDate": "2026-09-22T18:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 114,
+    "title": "Feature 114",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-15T10:00:00Z",
+    "closedAt": "2026-08-16T18:00:00Z",
+    "mergedAt": "2026-08-16T18:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 116,
+    "deletions": 67,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-08-15T20:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-16T17:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000f5f87",
+        "committedDate": "2026-08-15T09:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "000000000000000000000000000000000010f8a0",
+        "committedDate": "2026-08-15T21:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 115,
+    "title": "Feature 115",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-06T14:00:00Z",
+    "closedAt": "2026-09-07T02:00:00Z",
+    "mergedAt": "2026-09-07T02:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 77,
+    "deletions": 20,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-06T18:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000f7e76",
+        "committedDate": "2026-09-06T13:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 116,
+    "title": "Feature 116",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-23T16:00:00Z",
+    "closedAt": "2026-08-24T19:00:00Z",
+    "mergedAt": "2026-08-24T19:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 77,
+    "deletions": 97,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000f9d65",
+        "committedDate": "2026-08-23T15:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 117,
+    "title": "Feature 117",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-27T22:00:00Z",
+    "closedAt": "2026-09-28T15:00:00Z",
+    "mergedAt": "2026-09-28T15:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 245,
+    "deletions": 105,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-28T03:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000fbc54",
+        "committedDate": "2026-09-27T21:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 118,
+    "title": "Feature 118",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-08T15:00:00Z",
+    "closedAt": "2026-08-08T23:00:00Z",
+    "mergedAt": "2026-08-08T23:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 155,
+    "deletions": 50,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-08T17:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000fdb43",
+        "committedDate": "2026-08-08T14:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 119,
+    "title": "Feature 119",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-16T16:00:00Z",
+    "closedAt": "2026-09-17T04:00:00Z",
+    "mergedAt": "2026-09-17T04:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 104,
+    "deletions": 81,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-16T20:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000000ffa32",
+        "committedDate": "2026-09-16T15:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 120,
+    "title": "Feature 120",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-15T15:00:00Z",
+    "closedAt": "2026-09-18T07:00:00Z",
+    "mergedAt": "2026-09-18T07:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [],
+    "additions": 90,
+    "deletions": 35,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-16T10:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000101921",
+        "committedDate": "2026-09-15T14:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 121,
+    "title": "Feature 121",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-07T17:00:00Z",
+    "closedAt": "2026-08-08T09:00:00Z",
+    "mergedAt": "2026-08-08T09:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 289,
+    "deletions": 40,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-07T22:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000103810",
+        "committedDate": "2026-08-07T16:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 122,
+    "title": "Feature 122",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-03T09:00:00Z",
+    "closedAt": "2026-09-04T12:00:00Z",
+    "mergedAt": "2026-09-04T12:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 189,
+    "deletions": 111,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-03T17:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000001056ff",
+        "committedDate": "2026-09-03T08:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 123,
+    "title": "Feature 123",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-13T02:00:00Z",
+    "closedAt": "2026-09-14T12:00:00Z",
+    "mergedAt": "2026-09-14T12:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 36,
+    "deletions": 57,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-13T12:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000001075ee",
+        "committedDate": "2026-09-13T01:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 124,
+    "title": "Feature 124",
+    "state": "CLOSED",
+    "isDraft": false,
+    "createdAt": "2026-09-03T14:00:00Z",
+    "closedAt": "2026-09-06T05:00:00Z",
+    "mergedAt": null,
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [],
+    "additions": 267,
+    "deletions": 47,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-04T09:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000001094dd",
+        "committedDate": "2026-09-03T13:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 125,
+    "title": "Feature 125",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-16T20:00:00Z",
+    "closedAt": "2026-08-18T17:00:00Z",
+    "mergedAt": "2026-08-18T17:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 79,
+    "deletions": 39,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-17T10:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000010b3cc",
+        "committedDate": "2026-08-16T19:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 126,
+    "title": "Feature 126",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-26T20:00:00Z",
+    "closedAt": "2026-08-28T18:00:00Z",
+    "mergedAt": "2026-08-28T18:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 184,
+    "deletions": 23,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-08-27T10:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-28T17:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000010d2bb",
+        "committedDate": "2026-08-26T19:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "0000000000000000000000000000000000126bd4",
+        "committedDate": "2026-08-27T11:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 127,
+    "title": "Feature 127",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-17T09:00:00Z",
+    "closedAt": "2026-08-20T05:00:00Z",
+    "mergedAt": "2026-08-20T05:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 73,
+    "deletions": 76,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-18T05:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000010f1aa",
+        "committedDate": "2026-08-17T08:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 128,
+    "title": "Feature 128",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-29T16:00:00Z",
+    "closedAt": "2026-08-31T16:00:00Z",
+    "mergedAt": "2026-08-31T16:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 304,
+    "deletions": 36,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-30T06:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000111099",
+        "committedDate": "2026-08-29T15:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 129,
+    "title": "Feature 129",
+    "state": "CLOSED",
+    "isDraft": false,
+    "createdAt": "2026-09-08T23:00:00Z",
+    "closedAt": "2026-09-10T03:00:00Z",
+    "mergedAt": null,
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 297,
+    "deletions": 62,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-09T07:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000112f88",
+        "committedDate": "2026-09-08T22:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 130,
+    "title": "Feature 130",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-11T14:00:00Z",
+    "closedAt": "2026-09-13T18:00:00Z",
+    "mergedAt": "2026-09-13T18:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 256,
+    "deletions": 84,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-09-12T06:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-13T17:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000114e77",
+        "committedDate": "2026-09-11T13:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "000000000000000000000000000000000012e790",
+        "committedDate": "2026-09-12T07:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 131,
+    "title": "Feature 131",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-03T02:00:00Z",
+    "closedAt": "2026-08-04T02:00:00Z",
+    "mergedAt": "2026-08-04T02:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 196,
+    "deletions": 52,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-03T09:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000116d66",
+        "committedDate": "2026-08-03T01:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 132,
+    "title": "Feature 132",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-22T14:00:00Z",
+    "closedAt": "2026-08-24T04:00:00Z",
+    "mergedAt": "2026-08-24T04:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 137,
+    "deletions": 72,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-23T01:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000118c55",
+        "committedDate": "2026-08-22T13:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 133,
+    "title": "Feature 133",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-01T14:00:00Z",
+    "closedAt": "2026-08-02T21:00:00Z",
+    "mergedAt": "2026-08-02T21:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 133,
+    "deletions": 77,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-01T23:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000011ab44",
+        "committedDate": "2026-08-01T13:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 134,
+    "title": "Feature 134",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-26T06:00:00Z",
+    "closedAt": "2026-09-28T11:00:00Z",
+    "mergedAt": "2026-09-28T11:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [],
+    "additions": 208,
+    "deletions": 38,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-26T22:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000011ca33",
+        "committedDate": "2026-09-26T05:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 135,
+    "title": "Feature 135",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-31T22:00:00Z",
+    "closedAt": "2026-09-01T09:00:00Z",
+    "mergedAt": "2026-09-01T09:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 303,
+    "deletions": 62,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-09-01T01:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-01T08:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000011e922",
+        "committedDate": "2026-08-31T21:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "000000000000000000000000000000000013823b",
+        "committedDate": "2026-09-01T02:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 136,
+    "title": "Feature 136",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-06T21:00:00Z",
+    "closedAt": "2026-08-07T11:00:00Z",
+    "mergedAt": "2026-08-07T11:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 87,
+    "deletions": 5,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-08-07T01:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-07T10:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000120811",
+        "committedDate": "2026-08-06T20:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "000000000000000000000000000000000013a12a",
+        "committedDate": "2026-08-07T02:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 137,
+    "title": "Feature 137",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-11T19:00:00Z",
+    "closedAt": "2026-09-13T20:00:00Z",
+    "mergedAt": "2026-09-13T20:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 255,
+    "deletions": 32,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-12T10:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000122700",
+        "committedDate": "2026-09-11T18:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 138,
+    "title": "Feature 138",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-20T08:00:00Z",
+    "closedAt": "2026-09-20T22:00:00Z",
+    "mergedAt": "2026-09-20T22:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 206,
+    "deletions": 12,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000001245ef",
+        "committedDate": "2026-09-20T07:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "000000000000000000000000000000000013df08",
+        "committedDate": "2026-09-20T13:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 139,
+    "title": "Feature 139",
+    "state": "CLOSED",
+    "isDraft": false,
+    "createdAt": "2026-09-14T00:00:00Z",
+    "closedAt": "2026-09-16T02:00:00Z",
+    "mergedAt": null,
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [],
+    "additions": 231,
+    "deletions": 82,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-14T15:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000001264de",
+        "committedDate": "2026-09-13T23:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 140,
+    "title": "Feature 140",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-16T15:00:00Z",
+    "closedAt": "2026-08-17T00:00:00Z",
+    "mergedAt": "2026-08-17T00:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 16,
+    "deletions": 83,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000001283cd",
+        "committedDate": "2026-08-16T14:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 141,
+    "title": "Feature 141",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-06T08:00:00Z",
+    "closedAt": "2026-08-07T19:00:00Z",
+    "mergedAt": "2026-08-07T19:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 239,
+    "deletions": 24,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-06T19:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000012a2bc",
+        "committedDate": "2026-08-06T07:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 142,
+    "title": "Feature 142",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-06T11:00:00Z",
+    "closedAt": "2026-08-08T18:00:00Z",
+    "mergedAt": "2026-08-08T18:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [],
+    "additions": 231,
+    "deletions": 29,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000012c1ab",
+        "committedDate": "2026-08-06T10:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 143,
+    "title": "Feature 143",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-23T03:00:00Z",
+    "closedAt": "2026-08-23T13:00:00Z",
+    "mergedAt": "2026-08-23T13:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 185,
+    "deletions": 78,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-23T06:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000012e09a",
+        "committedDate": "2026-08-23T02:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 144,
+    "title": "Feature 144",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-04T20:00:00Z",
+    "closedAt": "2026-08-06T14:00:00Z",
+    "mergedAt": "2026-08-06T14:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [],
+    "additions": 214,
+    "deletions": 11,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-05T09:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000012ff89",
+        "committedDate": "2026-08-04T19:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 145,
+    "title": "Feature 145",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-22T04:00:00Z",
+    "closedAt": "2026-08-24T19:00:00Z",
+    "mergedAt": "2026-08-24T19:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [],
+    "additions": 90,
+    "deletions": 101,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-d"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-22T23:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000131e78",
+        "committedDate": "2026-08-22T03:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 146,
+    "title": "Feature 146",
+    "state": "CLOSED",
+    "isDraft": false,
+    "createdAt": "2026-09-19T03:00:00Z",
+    "closedAt": "2026-09-19T20:00:00Z",
+    "mergedAt": null,
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 159,
+    "deletions": 106,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-19T08:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000133d67",
+        "committedDate": "2026-09-19T02:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 147,
+    "title": "Feature 147",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-25T02:00:00Z",
+    "closedAt": "2026-09-26T17:00:00Z",
+    "mergedAt": "2026-09-26T17:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 240,
+    "deletions": 20,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-25T14:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000135c56",
+        "committedDate": "2026-09-25T01:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 148,
+    "title": "Feature 148",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-01T10:00:00Z",
+    "closedAt": "2026-09-02T02:00:00Z",
+    "mergedAt": "2026-09-02T02:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-a",
+      "id": "U_dev-a",
+      "name": "dev-a"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 131,
+    "deletions": 70,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-09-01T15:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-02T01:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000137b45",
+        "committedDate": "2026-09-01T09:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "000000000000000000000000000000000015145e",
+        "committedDate": "2026-09-01T16:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 149,
+    "title": "Feature 149",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-20T03:00:00Z",
+    "closedAt": "2026-09-22T07:00:00Z",
+    "mergedAt": "2026-09-22T07:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [],
+    "additions": 280,
+    "deletions": 107,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-20T19:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0000000000000000000000000000000000139a34",
+        "committedDate": "2026-09-20T02:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 150,
+    "title": "Feature 150",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-05T16:00:00Z",
+    "closedAt": "2026-09-06T08:00:00Z",
+    "mergedAt": "2026-09-06T08:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 70,
+    "deletions": 41,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-05T21:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000013b923",
+        "committedDate": "2026-09-05T15:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 151,
+    "title": "Feature 151",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-10T14:00:00Z",
+    "closedAt": "2026-08-11T03:00:00Z",
+    "mergedAt": "2026-08-11T03:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 43,
+    "deletions": 118,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-10T18:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000013d812",
+        "committedDate": "2026-08-10T13:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 152,
+    "title": "Feature 152",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-17T17:00:00Z",
+    "closedAt": "2026-09-18T16:00:00Z",
+    "mergedAt": "2026-09-18T16:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 38,
+    "deletions": 104,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-18T00:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000013f701",
+        "committedDate": "2026-09-17T16:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 153,
+    "title": "Feature 153",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-05T13:00:00Z",
+    "closedAt": "2026-08-07T17:00:00Z",
+    "mergedAt": "2026-08-07T17:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 85,
+    "deletions": 118,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-c"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-06T05:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000001415f0",
+        "committedDate": "2026-08-05T12:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 154,
+    "title": "Feature 154",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-18T16:00:00Z",
+    "closedAt": "2026-09-19T01:00:00Z",
+    "mergedAt": "2026-09-19T01:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [],
+    "additions": 260,
+    "deletions": 56,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-18T19:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000001434df",
+        "committedDate": "2026-09-18T15:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 155,
+    "title": "Feature 155",
+    "state": "CLOSED",
+    "isDraft": false,
+    "createdAt": "2026-08-18T22:00:00Z",
+    "closedAt": "2026-08-20T16:00:00Z",
+    "mergedAt": null,
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 42,
+    "deletions": 10,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000001453ce",
+        "committedDate": "2026-08-18T21:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 156,
+    "title": "Feature 156",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-13T15:00:00Z",
+    "closedAt": "2026-08-15T02:00:00Z",
+    "mergedAt": "2026-08-15T02:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [],
+    "additions": 280,
+    "deletions": 41,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-14T02:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000001472bd",
+        "committedDate": "2026-08-13T14:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 157,
+    "title": "Feature 157",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-17T13:00:00Z",
+    "closedAt": "2026-08-17T22:00:00Z",
+    "mergedAt": "2026-08-17T22:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-e",
+      "id": "U_dev-e",
+      "name": "dev-e"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 273,
+    "deletions": 71,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-17T16:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "00000000000000000000000000000000001491ac",
+        "committedDate": "2026-08-17T12:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 158,
+    "title": "Feature 158",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-03T17:00:00Z",
+    "closedAt": "2026-08-05T12:00:00Z",
+    "mergedAt": "2026-08-05T12:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-b",
+      "id": "U_dev-b",
+      "name": "dev-b"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 188,
+    "deletions": 94,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-e"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-04T06:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000014b09b",
+        "committedDate": "2026-08-03T16:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 159,
+    "title": "Feature 159",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-14T01:00:00Z",
+    "closedAt": "2026-08-15T03:00:00Z",
+    "mergedAt": "2026-08-15T03:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-c",
+      "id": "U_dev-c",
+      "name": "dev-c"
+    },
+    "labels": [
+      {
+        "name": "human-only"
+      }
+    ],
+    "additions": 109,
+    "deletions": 21,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-b"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-08-14T09:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000014cf8a",
+        "committedDate": "2026-08-14T00:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 160,
+    "title": "Feature 160",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-24T18:00:00Z",
+    "closedAt": "2026-09-25T10:00:00Z",
+    "mergedAt": "2026-09-25T10:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "dev-d",
+      "id": "U_dev-d",
+      "name": "dev-d"
+    },
+    "labels": [
+      {
+        "name": "ai-assisted"
+      }
+    ],
+    "additions": 172,
+    "deletions": 100,
+    "reviews": [
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "CHANGES_REQUESTED",
+        "submittedAt": "2026-09-24T23:00:00Z"
+      },
+      {
+        "author": {
+          "login": "dev-a"
+        },
+        "state": "APPROVED",
+        "submittedAt": "2026-09-25T09:00:00Z"
+      }
+    ],
+    "commits": [
+      {
+        "oid": "000000000000000000000000000000000014ee79",
+        "committedDate": "2026-09-24T17:00:00Z",
+        "messageHeadline": "change",
+        "messageBody": ""
+      },
+      {
+        "oid": "0000000000000000000000000000000000168792",
+        "committedDate": "2026-09-25T00:00:00Z",
+        "messageHeadline": "address review",
+        "messageBody": ""
+      }
+    ]
+  },
+  {
+    "number": 161,
+    "title": "Bump dependency 161",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-10T14:00:00Z",
+    "closedAt": "2026-09-10T15:00:00Z",
+    "mergedAt": "2026-09-10T15:00:00Z",
+    "author": {
+      "is_bot": true,
+      "login": "app/dependabot"
+    },
+    "labels": [
+      {
+        "name": "dependencies"
+      }
+    ],
+    "additions": 2,
+    "deletions": 2,
+    "reviews": [],
+    "commits": []
+  },
+  {
+    "number": 162,
+    "title": "Bump dependency 162",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-10T20:00:00Z",
+    "closedAt": "2026-09-10T21:00:00Z",
+    "mergedAt": "2026-09-10T21:00:00Z",
+    "author": {
+      "is_bot": true,
+      "login": "app/dependabot"
+    },
+    "labels": [
+      {
+        "name": "dependencies"
+      }
+    ],
+    "additions": 2,
+    "deletions": 2,
+    "reviews": [],
+    "commits": []
+  },
+  {
+    "number": 163,
+    "title": "Bump dependency 163",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-11T02:00:00Z",
+    "closedAt": "2026-09-11T03:00:00Z",
+    "mergedAt": "2026-09-11T03:00:00Z",
+    "author": {
+      "is_bot": true,
+      "login": "app/dependabot"
+    },
+    "labels": [
+      {
+        "name": "dependencies"
+      }
+    ],
+    "additions": 2,
+    "deletions": 2,
+    "reviews": [],
+    "commits": []
+  },
+  {
+    "number": 164,
+    "title": "Bump dependency 164",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-11T08:00:00Z",
+    "closedAt": "2026-09-11T09:00:00Z",
+    "mergedAt": "2026-09-11T09:00:00Z",
+    "author": {
+      "is_bot": true,
+      "login": "app/dependabot"
+    },
+    "labels": [
+      {
+        "name": "dependencies"
+      }
+    ],
+    "additions": 2,
+    "deletions": 2,
+    "reviews": [],
+    "commits": []
+  },
+  {
+    "number": 165,
+    "title": "Bump dependency 165",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-11T14:00:00Z",
+    "closedAt": "2026-09-11T15:00:00Z",
+    "mergedAt": "2026-09-11T15:00:00Z",
+    "author": {
+      "is_bot": true,
+      "login": "app/dependabot"
+    },
+    "labels": [
+      {
+        "name": "dependencies"
+      }
+    ],
+    "additions": 2,
+    "deletions": 2,
+    "reviews": [],
+    "commits": []
+  },
+  {
+    "number": 166,
+    "title": "Bump dependency 166",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-11T20:00:00Z",
+    "closedAt": "2026-09-11T21:00:00Z",
+    "mergedAt": "2026-09-11T21:00:00Z",
+    "author": {
+      "is_bot": true,
+      "login": "app/dependabot"
+    },
+    "labels": [
+      {
+        "name": "dependencies"
+      }
+    ],
+    "additions": 2,
+    "deletions": 2,
+    "reviews": [],
+    "commits": []
+  }
+]
