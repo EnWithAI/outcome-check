@@ -1,0 +1,625 @@
+[
+  {
+    "number": 1,
+    "title": "Add CSV parser",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-01T00:00:00Z",
+    "closedAt": "2026-09-01T10:00:00Z",
+    "mergedAt": "2026-09-01T10:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "alice",
+      "id": "U_alice",
+      "name": "Alice Example"
+    },
+    "labels": [
+      {
+        "id": "L_ai-assisted",
+        "name": "ai-assisted",
+        "description": "",
+        "color": "ededed"
+      }
+    ],
+    "additions": 10,
+    "deletions": 0,
+    "reviews": [
+      {
+        "id": "R_bob2026-09-01T02:00:00Z",
+        "author": {
+          "login": "bob"
+        },
+        "authorAssociation": "MEMBER",
+        "body": "",
+        "submittedAt": "2026-09-01T02:00:00Z",
+        "includesCreatedEdit": false,
+        "reactionGroups": [],
+        "state": "APPROVED",
+        "commit": {
+          "oid": "1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a"
+        }
+      }
+    ],
+    "commits": [
+      {
+        "oid": "1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a",
+        "messageHeadline": "change",
+        "messageBody": "",
+        "committedDate": "2026-08-31T23:00:00Z",
+        "authoredDate": "2026-08-31T23:00:00Z",
+        "authors": [
+          {
+            "name": "Alice Example",
+            "email": "alice@example.com",
+            "id": "U_alice",
+            "login": "alice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Refactor billing",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-02T00:00:00Z",
+    "closedAt": "2026-09-03T00:00:00Z",
+    "mergedAt": "2026-09-03T00:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "alice",
+      "id": "U_alice",
+      "name": "Alice Example"
+    },
+    "labels": [],
+    "additions": 100,
+    "deletions": 20,
+    "reviews": [
+      {
+        "id": "R_bob2026-09-02T04:00:00Z",
+        "author": {
+          "login": "bob"
+        },
+        "authorAssociation": "MEMBER",
+        "body": "",
+        "submittedAt": "2026-09-02T04:00:00Z",
+        "includesCreatedEdit": false,
+        "reactionGroups": [],
+        "state": "CHANGES_REQUESTED",
+        "commit": {
+          "oid": "2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a"
+        }
+      },
+      {
+        "id": "R_bob2026-09-02T20:00:00Z",
+        "author": {
+          "login": "bob"
+        },
+        "authorAssociation": "MEMBER",
+        "body": "",
+        "submittedAt": "2026-09-02T20:00:00Z",
+        "includesCreatedEdit": false,
+        "reactionGroups": [],
+        "state": "APPROVED",
+        "commit": {
+          "oid": "2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b"
+        }
+      }
+    ],
+    "commits": [
+      {
+        "oid": "2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a",
+        "messageHeadline": "change",
+        "messageBody": "",
+        "committedDate": "2026-09-01T23:00:00Z",
+        "authoredDate": "2026-09-01T23:00:00Z",
+        "authors": [
+          {
+            "name": "Alice Example",
+            "email": "alice@example.com",
+            "id": "U_alice",
+            "login": "alice"
+          }
+        ]
+      },
+      {
+        "oid": "2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b",
+        "messageHeadline": "change",
+        "messageBody": "",
+        "committedDate": "2026-09-02T10:00:00Z",
+        "authoredDate": "2026-09-02T10:00:00Z",
+        "authors": [
+          {
+            "name": "Alice Example",
+            "email": "alice@example.com",
+            "id": "U_alice",
+            "login": "alice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Fix typo",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-03T00:00:00Z",
+    "closedAt": "2026-09-03T02:00:00Z",
+    "mergedAt": "2026-09-03T02:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "alice",
+      "id": "U_alice",
+      "name": "Alice Example"
+    },
+    "labels": [
+      {
+        "id": "L_ai-assisted",
+        "name": "ai-assisted",
+        "description": "",
+        "color": "ededed"
+      }
+    ],
+    "additions": 5,
+    "deletions": 5,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a",
+        "messageHeadline": "change",
+        "messageBody": "",
+        "committedDate": "2026-09-02T23:00:00Z",
+        "authoredDate": "2026-09-02T23:00:00Z",
+        "authors": [
+          {
+            "name": "Alice Example",
+            "email": "alice@example.com",
+            "id": "U_alice",
+            "login": "alice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Try new cache",
+    "state": "CLOSED",
+    "isDraft": false,
+    "createdAt": "2026-09-04T00:00:00Z",
+    "closedAt": "2026-09-05T00:00:00Z",
+    "mergedAt": null,
+    "author": {
+      "is_bot": false,
+      "login": "alice",
+      "id": "U_alice",
+      "name": "Alice Example"
+    },
+    "labels": [],
+    "additions": 30,
+    "deletions": 0,
+    "reviews": [
+      {
+        "id": "R_bob2026-09-04T01:00:00Z",
+        "author": {
+          "login": "bob"
+        },
+        "authorAssociation": "MEMBER",
+        "body": "",
+        "submittedAt": "2026-09-04T01:00:00Z",
+        "includesCreatedEdit": false,
+        "reactionGroups": [],
+        "state": "COMMENTED",
+        "commit": {
+          "oid": "4a4a4a4a4a4a4a4a4a4a4a4a4a4a4a4a4a4a4a4a"
+        }
+      }
+    ],
+    "commits": [
+      {
+        "oid": "4a4a4a4a4a4a4a4a4a4a4a4a4a4a4a4a4a4a4a4a",
+        "messageHeadline": "change",
+        "messageBody": "",
+        "committedDate": "2026-09-03T23:00:00Z",
+        "authoredDate": "2026-09-03T23:00:00Z",
+        "authors": [
+          {
+            "name": "Alice Example",
+            "email": "alice@example.com",
+            "id": "U_alice",
+            "login": "alice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Add export",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-05T00:00:00Z",
+    "closedAt": "2026-09-07T00:00:00Z",
+    "mergedAt": "2026-09-07T00:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "alice",
+      "id": "U_alice",
+      "name": "Alice Example"
+    },
+    "labels": [],
+    "additions": 200,
+    "deletions": 50,
+    "reviews": [
+      {
+        "id": "R_alice2026-09-05T01:00:00Z",
+        "author": {
+          "login": "alice"
+        },
+        "authorAssociation": "MEMBER",
+        "body": "",
+        "submittedAt": "2026-09-05T01:00:00Z",
+        "includesCreatedEdit": false,
+        "reactionGroups": [],
+        "state": "COMMENTED",
+        "commit": {
+          "oid": "5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a"
+        }
+      },
+      {
+        "id": "R_carol2026-09-05T06:00:00Z",
+        "author": {
+          "login": "carol"
+        },
+        "authorAssociation": "MEMBER",
+        "body": "",
+        "submittedAt": "2026-09-05T06:00:00Z",
+        "includesCreatedEdit": false,
+        "reactionGroups": [],
+        "state": "APPROVED",
+        "commit": {
+          "oid": "5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b"
+        }
+      }
+    ],
+    "commits": [
+      {
+        "oid": "5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a",
+        "messageHeadline": "change",
+        "messageBody": "",
+        "committedDate": "2026-09-04T23:00:00Z",
+        "authoredDate": "2026-09-04T23:00:00Z",
+        "authors": [
+          {
+            "name": "Alice Example",
+            "email": "alice@example.com",
+            "id": "U_alice",
+            "login": "alice"
+          }
+        ]
+      },
+      {
+        "oid": "5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b",
+        "messageHeadline": "change",
+        "messageBody": "",
+        "committedDate": "2026-09-05T03:00:00Z",
+        "authoredDate": "2026-09-05T03:00:00Z",
+        "authors": [
+          {
+            "name": "Alice Example",
+            "email": "alice@example.com",
+            "id": "U_alice",
+            "login": "alice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "Revert \"Add export\"",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-08T00:00:00Z",
+    "closedAt": "2026-09-08T04:00:00Z",
+    "mergedAt": "2026-09-08T04:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "alice",
+      "id": "U_alice",
+      "name": "Alice Example"
+    },
+    "labels": [],
+    "additions": 50,
+    "deletions": 200,
+    "reviews": [
+      {
+        "id": "R_bob2026-09-08T01:00:00Z",
+        "author": {
+          "login": "bob"
+        },
+        "authorAssociation": "MEMBER",
+        "body": "",
+        "submittedAt": "2026-09-08T01:00:00Z",
+        "includesCreatedEdit": false,
+        "reactionGroups": [],
+        "state": "APPROVED",
+        "commit": {
+          "oid": "6a6a6a6a6a6a6a6a6a6a6a6a6a6a6a6a6a6a6a6a"
+        }
+      }
+    ],
+    "commits": [
+      {
+        "oid": "6a6a6a6a6a6a6a6a6a6a6a6a6a6a6a6a6a6a6a6a",
+        "messageHeadline": "change",
+        "messageBody": "Co-Authored-By: Claude <noreply@anthropic.com>",
+        "committedDate": "2026-09-07T23:00:00Z",
+        "authoredDate": "2026-09-07T23:00:00Z",
+        "authors": [
+          {
+            "name": "Alice Example",
+            "email": "alice@example.com",
+            "id": "U_alice",
+            "login": "alice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "Bump lodash",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-09T00:00:00Z",
+    "closedAt": "2026-09-09T01:00:00Z",
+    "mergedAt": "2026-09-09T01:00:00Z",
+    "author": {
+      "is_bot": true,
+      "login": "app/dependabot"
+    },
+    "labels": [
+      {
+        "id": "L_dependencies",
+        "name": "dependencies",
+        "description": "",
+        "color": "ededed"
+      }
+    ],
+    "additions": 1,
+    "deletions": 1,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a",
+        "messageHeadline": "change",
+        "messageBody": "",
+        "committedDate": "2026-09-08T23:00:00Z",
+        "authoredDate": "2026-09-08T23:00:00Z",
+        "authors": [
+          {
+            "name": "Alice Example",
+            "email": "alice@example.com",
+            "id": "U_alice",
+            "login": "alice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "WIP: search",
+    "state": "OPEN",
+    "isDraft": true,
+    "createdAt": "2026-09-10T00:00:00Z",
+    "closedAt": null,
+    "mergedAt": null,
+    "author": {
+      "is_bot": false,
+      "login": "alice",
+      "id": "U_alice",
+      "name": "Alice Example"
+    },
+    "labels": [],
+    "additions": 10,
+    "deletions": 0,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "8a8a8a8a8a8a8a8a8a8a8a8a8a8a8a8a8a8a8a8a",
+        "messageHeadline": "change",
+        "messageBody": "",
+        "committedDate": "2026-09-09T23:00:00Z",
+        "authoredDate": "2026-09-09T23:00:00Z",
+        "authors": [
+          {
+            "name": "Alice Example",
+            "email": "alice@example.com",
+            "id": "U_alice",
+            "login": "alice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "Add search",
+    "state": "OPEN",
+    "isDraft": false,
+    "createdAt": "2026-09-20T00:00:00Z",
+    "closedAt": null,
+    "mergedAt": null,
+    "author": {
+      "is_bot": false,
+      "login": "alice",
+      "id": "U_alice",
+      "name": "Alice Example"
+    },
+    "labels": [],
+    "additions": 10,
+    "deletions": 0,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a9a",
+        "messageHeadline": "change",
+        "messageBody": "",
+        "committedDate": "2026-09-19T23:00:00Z",
+        "authoredDate": "2026-09-19T23:00:00Z",
+        "authors": [
+          {
+            "name": "Alice Example",
+            "email": "alice@example.com",
+            "id": "U_alice",
+            "login": "alice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "Old feature",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-08-20T00:00:00Z",
+    "closedAt": "2026-08-25T00:00:00Z",
+    "mergedAt": "2026-08-25T00:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "alice",
+      "id": "U_alice",
+      "name": "Alice Example"
+    },
+    "labels": [],
+    "additions": 40,
+    "deletions": 4,
+    "reviews": [
+      {
+        "id": "R_bob2026-08-21T00:00:00Z",
+        "author": {
+          "login": "bob"
+        },
+        "authorAssociation": "MEMBER",
+        "body": "",
+        "submittedAt": "2026-08-21T00:00:00Z",
+        "includesCreatedEdit": false,
+        "reactionGroups": [],
+        "state": "APPROVED",
+        "commit": {
+          "oid": "0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a"
+        }
+      }
+    ],
+    "commits": [
+      {
+        "oid": "0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a",
+        "messageHeadline": "change",
+        "messageBody": "",
+        "committedDate": "2026-08-19T23:00:00Z",
+        "authoredDate": "2026-08-19T23:00:00Z",
+        "authors": [
+          {
+            "name": "Alice Example",
+            "email": "alice@example.com",
+            "id": "U_alice",
+            "login": "alice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "Experiment",
+    "state": "CLOSED",
+    "isDraft": false,
+    "createdAt": "2026-09-25T00:00:00Z",
+    "closedAt": "2026-09-26T00:00:00Z",
+    "mergedAt": null,
+    "author": {
+      "is_bot": false,
+      "login": "alice",
+      "id": "U_alice",
+      "name": "Alice Example"
+    },
+    "labels": [],
+    "additions": 3,
+    "deletions": 3,
+    "reviews": [],
+    "commits": [
+      {
+        "oid": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "messageHeadline": "change",
+        "messageBody": "",
+        "committedDate": "2026-09-24T23:00:00Z",
+        "authoredDate": "2026-09-24T23:00:00Z",
+        "authors": [
+          {
+            "name": "Alice Example",
+            "email": "alice@example.com",
+            "id": "U_alice",
+            "login": "alice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "Late feature",
+    "state": "MERGED",
+    "isDraft": false,
+    "createdAt": "2026-09-28T00:00:00Z",
+    "closedAt": "2026-10-02T00:00:00Z",
+    "mergedAt": "2026-10-02T00:00:00Z",
+    "author": {
+      "is_bot": false,
+      "login": "alice",
+      "id": "U_alice",
+      "name": "Alice Example"
+    },
+    "labels": [],
+    "additions": 8,
+    "deletions": 8,
+    "reviews": [
+      {
+        "id": "R_bob2026-09-29T00:00:00Z",
+        "author": {
+          "login": "bob"
+        },
+        "authorAssociation": "MEMBER",
+        "body": "",
+        "submittedAt": "2026-09-29T00:00:00Z",
+        "includesCreatedEdit": false,
+        "reactionGroups": [],
+        "state": "APPROVED",
+        "commit": {
+          "oid": "cccccccccccccccccccccccccccccccccccccccc"
+        }
+      }
+    ],
+    "commits": [
+      {
+        "oid": "cccccccccccccccccccccccccccccccccccccccc",
+        "messageHeadline": "change",
+        "messageBody": "",
+        "committedDate": "2026-09-27T23:00:00Z",
+        "authoredDate": "2026-09-27T23:00:00Z",
+        "authors": [
+          {
+            "name": "Alice Example",
+            "email": "alice@example.com",
+            "id": "U_alice",
+            "login": "alice"
+          }
+        ]
+      }
+    ]
+  }
+]

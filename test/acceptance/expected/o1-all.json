@@ -1,0 +1,114 @@
+{
+  "fixture": "o1",
+  "args": [
+    "report",
+    "--prs",
+    "prs.json",
+    "--runs",
+    "runs.json",
+    "--attribution",
+    "attribution.csv",
+    "--config",
+    "config.json",
+    "--since",
+    "2026-09-01",
+    "--until",
+    "2026-09-30"
+  ],
+  "population": {
+    "records": 12,
+    "invalid": 0,
+    "duplicates": 0,
+    "bots_excluded": 1,
+    "drafts_excluded": 1,
+    "label_excluded": 0,
+    "open": 1,
+    "closed_in_window": 7,
+    "merged_in_window": 5
+  },
+  "attribution": {
+    "ai_assisted": 3,
+    "not_ai_assisted": 1,
+    "unknown": 6,
+    "conflicts": 0,
+    "unmatched_rows": 1
+  },
+  "all": {
+    "acceptance_rate": {
+      "n": 7,
+      "numerator": 5,
+      "denominator": 7,
+      "value": 0.7143
+    },
+    "cycle_time_hours": {
+      "n": 5,
+      "median": 10,
+      "p75": 24,
+      "p90": 48
+    },
+    "time_to_first_review_hours": {
+      "n": 4,
+      "median": 3,
+      "p75": 4,
+      "p90": 6
+    },
+    "unreviewed_merge_rate": {
+      "n": 5,
+      "numerator": 1,
+      "denominator": 5,
+      "value": 0.2
+    },
+    "changes_requested_rate": {
+      "n": 5,
+      "numerator": 1,
+      "denominator": 5,
+      "value": 0.2
+    },
+    "post_review_commit_rate": {
+      "n": 4,
+      "numerator": 1,
+      "denominator": 4,
+      "value": 0.25
+    },
+    "ci_first_pass_rate": {
+      "n": 5,
+      "numerator": 3,
+      "denominator": 5,
+      "value": 0.6
+    },
+    "revert_rate": {
+      "n": 4,
+      "numerator": 1,
+      "denominator": 4,
+      "value": 0.25
+    },
+    "pr_size_lines": {
+      "n": 5,
+      "median": 120,
+      "p75": 250,
+      "p90": 250
+    }
+  },
+  "statuses": {
+    "acceptance_rate": "verified_static_fact",
+    "cycle_time_hours": "verified_static_fact",
+    "time_to_first_review_hours": "verified_static_fact",
+    "unreviewed_merge_rate": "verified_static_fact",
+    "changes_requested_rate": "hypothesis",
+    "post_review_commit_rate": "hypothesis",
+    "ci_first_pass_rate": "verified_static_fact",
+    "revert_rate": "hypothesis",
+    "pr_size_lines": "verified_static_fact"
+  },
+  "ai_cost": [
+    {
+      "currency": "USD",
+      "total": 5.0,
+      "prs_with_cost": 2,
+      "ai_assisted_merged": 3,
+      "per_pr": 2.5
+    }
+  ],
+  "small_sample": true,
+  "segments_withheld": true
+}

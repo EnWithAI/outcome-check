@@ -1,0 +1,191 @@
+{
+  "fixture": "o1",
+  "args": [
+    "report",
+    "--prs",
+    "prs.json",
+    "--runs",
+    "runs.json",
+    "--attribution",
+    "attribution.csv",
+    "--config",
+    "config.json",
+    "--since",
+    "2026-09-01",
+    "--until",
+    "2026-09-30",
+    "--min-sample",
+    "1"
+  ],
+  "segments": {
+    "ai_assisted": {
+      "acceptance_rate": {
+        "n": 3,
+        "numerator": 3,
+        "denominator": 3,
+        "value": 1.0
+      },
+      "cycle_time_hours": {
+        "n": 3,
+        "median": 10,
+        "p75": 48,
+        "p90": 48
+      },
+      "time_to_first_review_hours": {
+        "n": 2,
+        "median": 4,
+        "p75": 6,
+        "p90": 6
+      },
+      "unreviewed_merge_rate": {
+        "n": 3,
+        "numerator": 1,
+        "denominator": 3,
+        "value": 0.3333
+      },
+      "changes_requested_rate": {
+        "n": 3,
+        "numerator": 0,
+        "denominator": 3,
+        "value": 0.0
+      },
+      "post_review_commit_rate": {
+        "n": 2,
+        "numerator": 0,
+        "denominator": 2,
+        "value": 0.0
+      },
+      "ci_first_pass_rate": {
+        "n": 3,
+        "numerator": 2,
+        "denominator": 3,
+        "value": 0.6667
+      },
+      "revert_rate": {
+        "n": 3,
+        "numerator": 1,
+        "denominator": 3,
+        "value": 0.3333
+      },
+      "pr_size_lines": {
+        "n": 3,
+        "median": 10,
+        "p75": 250,
+        "p90": 250
+      }
+    },
+    "not_ai_assisted": {
+      "acceptance_rate": {
+        "n": 1,
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "cycle_time_hours": {
+        "n": 1,
+        "median": 24,
+        "p75": 24,
+        "p90": 24
+      },
+      "time_to_first_review_hours": {
+        "n": 1,
+        "median": 4,
+        "p75": 4,
+        "p90": 4
+      },
+      "unreviewed_merge_rate": {
+        "n": 1,
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "changes_requested_rate": {
+        "n": 1,
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "post_review_commit_rate": {
+        "n": 1,
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "ci_first_pass_rate": {
+        "n": 1,
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "revert_rate": {
+        "n": 1,
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "pr_size_lines": {
+        "n": 1,
+        "median": 120,
+        "p75": 120,
+        "p90": 120
+      }
+    },
+    "unknown_attribution": {
+      "acceptance_rate": {
+        "n": 3,
+        "numerator": 1,
+        "denominator": 3,
+        "value": 0.3333
+      },
+      "cycle_time_hours": {
+        "n": 1,
+        "median": 4,
+        "p75": 4,
+        "p90": 4
+      },
+      "time_to_first_review_hours": {
+        "n": 1,
+        "median": 1,
+        "p75": 1,
+        "p90": 1
+      },
+      "unreviewed_merge_rate": {
+        "n": 1,
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "changes_requested_rate": {
+        "n": 1,
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "post_review_commit_rate": {
+        "n": 1,
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "ci_first_pass_rate": {
+        "n": 1,
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "revert_rate": {
+        "n": 0,
+        "numerator": 0,
+        "denominator": 0,
+        "value": null,
+        "unavailable_reason": "no-data"
+      },
+      "pr_size_lines": {
+        "n": 1,
+        "median": 250,
+        "p75": 250,
+        "p90": 250
+      }
+    }
+  }
+}

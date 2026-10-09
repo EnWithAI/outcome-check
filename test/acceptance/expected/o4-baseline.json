@@ -1,0 +1,38 @@
+{
+  "fixture": "o1",
+  "args": [
+    "report",
+    "--prs",
+    "prs.json",
+    "--runs",
+    "runs.json",
+    "--attribution",
+    "attribution.csv",
+    "--config",
+    "config.json",
+    "--since",
+    "2026-09-01",
+    "--until",
+    "2026-09-30",
+    "--min-sample",
+    "1",
+    "--baseline-since",
+    "2026-08-01",
+    "--baseline-until",
+    "2026-08-31"
+  ],
+  "baseline": {
+    "acceptance_rate": {
+      "n": 1,
+      "numerator": 1,
+      "denominator": 1,
+      "value": 1.0
+    },
+    "cycle_time_hours": {
+      "n": 1,
+      "median": 120,
+      "p75": 120,
+      "p90": 120
+    }
+  }
+}
