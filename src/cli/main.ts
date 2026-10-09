@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+/**
+ * Executable entry point for the `outcome-check` command. Delegates to run() and sets the exit code.
+ */
+import { run } from "./run.js";
+
+const code = await run(process.argv.slice(2), {
+  stdout: (text) => process.stdout.write(text),
+  stderr: (text) => process.stderr.write(text),
+  cwd: process.cwd(),
+});
+process.exitCode = code;
