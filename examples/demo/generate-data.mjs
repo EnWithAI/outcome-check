@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: 2026 EnWithAI Technologies
 /**
  * Writes a synthetic, deterministic demo dataset (gh-shaped PR and run exports plus an attribution file) to
  * examples/demo/data/. A seeded generator makes every run identical. No real repository or person is described.

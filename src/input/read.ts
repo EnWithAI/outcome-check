@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: 2026 EnWithAI Technologies
 /**
  * Input files: size-capped reading, JSON arrays from `gh pr list --json` / `gh run list --json`, and the attribution
  * file (CSV with a header, or JSON). Records are validated one by one; invalid records are counted, not fatal.

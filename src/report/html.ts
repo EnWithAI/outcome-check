@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: 2026 EnWithAI Technologies
 /**
  * Static HTML reporter: one self-contained page with inline CSS, no JavaScript and no external requests. Every
  * string is HTML-escaped.
@@ -71,7 +73,7 @@ ${costs ? `<ul>${costs}</ul>` : "<p>No costs recorded for merged AI-assisted PRs
 <ul>${report.metrics.map((m) => `<li><strong>${html(m.title)}</strong> (<code>${html(m.id)}</code>): ${html(m.definition)}</li>`).join("\n")}</ul>
 <h2>Data limitations</h2>
 ${limitations ? `<ul>${limitations}</ul>` : "<p>None detected.</p>"}
-<footer>Outcome Check ${html(report.run_metadata.tool_version)} · offline${options.branding ? ' · Built by EnWithAI · Part of CrewPE Engineering Commons · <a href="https://crewpe.ai">crewpe.ai</a>' : ""}</footer>
+<footer>Outcome Check ${html(report.run_metadata.tool_version)} · offline${options.branding ? ' · An EnWithAI Engineering Commons tool · <a href="https://crewpe.ai">crewpe.ai</a>' : ""}</footer>
 </main>
 </body>
 </html>

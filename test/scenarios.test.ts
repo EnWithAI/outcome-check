@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: 2026 EnWithAI Technologies
 /**
  * Scenarios O5–O7 (docs/SPEC.md §8): missing fields and truncated exports, adversarial and malformed input,
  * privacy (no identities in any output), schema validation, determinism and audit reproducibility.

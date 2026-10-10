@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: 2026 EnWithAI Technologies
 /**
  * Configuration (.outcome-check.json): defaults and strict validation. Data only: no JavaScript, no regular
  * expressions, unknown keys rejected.

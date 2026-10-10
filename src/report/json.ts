@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: 2026 EnWithAI Technologies
 /**
  * JSON reporter: the report object, pretty-printed with a trailing newline (key order follows the schema).
  */

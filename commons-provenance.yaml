@@ -1,0 +1,40 @@
+# SPDX-License-Identifier: MIT
+# Machine-readable Commons provenance. Standard: EnWithAI Engineering Commons attribution standard v1.0.
+schema_version: "0.1"
+commons:
+  program: engineering-commons
+  publisher: "EnWithAI Technologies"
+  project: outcome-check
+  former_names: [AgentScore]
+license:
+  spdx: MIT
+  file: LICENSE
+  copyright_holder: "EnWithAI Technologies"
+  copyright_holder_confirmed: true # 2026-10-10: employee work, company property
+attribution:
+  file: ATTRIBUTION.md
+  notice: NOTICE.md
+  trademarks: TRADEMARKS.md
+  references: REFERENCES.md
+development:
+  vendored_third_party_code: false
+  ai_assisted: true
+  synthetic_fixtures_only: true
+ecosystem:
+  related_product: CrewPE
+  dependency: none
+  integration: none
+frameworks:
+  clear:
+    owner: NetworkGain Consulting
+    relationship: none
+    spec_version: null
+    evidence: "No structured-reasoning methodology is used."
+  trace:
+    owner: EnWithAI Technologies
+    relationship: not-assessed
+    spec_version: null
+    evidence: "TRACE specification not available."
+upstream: []
+references: REFERENCES.md
+review_items: [HR-5, HR-11]

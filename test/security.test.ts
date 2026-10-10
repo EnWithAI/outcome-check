@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: 2026 EnWithAI Technologies
 /**
  * Security invariants: no network, process or eval primitives in src/; the tool reads only the inputs and writes
  * only --output.

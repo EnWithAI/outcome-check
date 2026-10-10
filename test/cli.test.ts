@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: 2026 EnWithAI Technologies
 /**
  * CLI contract: help/version, commands, exit codes for usage and input errors, config handling, window validation
  * and output files.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: 2026 EnWithAI Technologies
 /**
  * README quickstart with the built CLI as a separate process: regenerating the demo data and running the demo
  * command must reproduce the committed sample reports byte for byte (apart from normalized run metadata).

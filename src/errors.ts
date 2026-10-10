@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: 2026 EnWithAI Technologies
 /**
  * Error types and documented process exit codes. Every expected failure is a OutcomeCheckError carrying an exit
  * code and an optional remediation hint; anything else is treated as an internal bug (exit 1).

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: 2026 EnWithAI Technologies
 /**
  * Test helpers: run the CLI in-process, copy fixtures into temporary directories and load reports.
  */

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: 2026 EnWithAI Technologies
 /**
  * Unit tests: statistics, CSV parsing, record validation, attribution precedence and conflicts, commit trailers,
  * CI first-pass edge cases, config validation.

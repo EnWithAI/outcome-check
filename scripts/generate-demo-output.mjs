@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: 2026 EnWithAI Technologies
 /**
  * Regenerates the committed sample outputs in examples/demo/output/ with the built CLI. Run-specific metadata
  * (generated_at, duration_ms, node_version) is normalized so the samples are byte-reproducible.

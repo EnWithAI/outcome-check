@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: 2026 EnWithAI Technologies
 /**
  * Analysis pipeline: read inputs → validate records → population filters → attribution → windows → metrics per
  * segment and baseline → AI cost → data-quality limitations and notices. Pure apart from reading inputs and the clock.

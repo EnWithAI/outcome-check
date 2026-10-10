@@ -27,7 +27,7 @@ What it refuses to do: rank or name people, claim that AI _caused_ a difference,
 Requires Node.js 22, 24 or ≥ 26. No runtime dependencies. The demo data is synthetic and generated deterministically.
 
 ```bash
-git clone <this repository> outcome-check && cd outcome-check
+git clone https://github.com/enwithai/outcome-check.git outcome-check && cd outcome-check
 npm ci --ignore-scripts && npm run build
 cd examples/demo
 node ../../dist/cli/main.js report --prs data/prs.json --runs data/runs.json --attribution data/attribution.csv \
@@ -57,13 +57,13 @@ gh run list --limit 1000 \
 
 ## Install
 
-Until a release is published, install from a local build:
-
 ```bash
-npm ci --ignore-scripts && npm run build && npm pack
-npm install --global ./enwithai-outcome-check-0.1.0-alpha.0.tgz
+npm install --global @enwithai/outcome-check@alpha
 outcome-check --help
 ```
+
+Alpha releases are published under the `alpha` dist-tag. To build from source instead:
+`git clone https://github.com/enwithai/outcome-check.git && cd outcome-check && npm ci --ignore-scripts && npm run build`.
 
 Uninstall with `npm uninstall --global @enwithai/outcome-check`.
 
@@ -99,4 +99,12 @@ MIT © EnWithAI Technologies. Not affiliated with or endorsed by GitHub.
 
 ---
 
-<sub>Built by EnWithAI · Part of CrewPE Engineering Commons · [crewpe.ai](https://crewpe.ai) · Enterprise advisory: [NetworkGain](https://networkgain.com)</sub>
+<sub>**Check the spec. Check the impact. Check the outcome.** Outcome Check is one of three checks, with
+[Impact Check](https://github.com/enwithai/impact-check) and [Spec Check](https://github.com/enwithai/spec-check).</sub>
+
+<sub>An **EnWithAI Engineering Commons** initiative. Developed and maintained by EnWithAI Technologies, contributing to
+open, verifiable and accountable AI-assisted software engineering. Part of the broader [CrewPE](https://crewpe.ai)
+engineering ecosystem. Outcome Check is independently usable and does not require CrewPE. Enterprise advisory and
+transformation perspectives are supported through [NetworkGain Consulting](https://networkgain.com).
+Attribution: [ATTRIBUTION.md](ATTRIBUTION.md) · Notices: [NOTICE.md](NOTICE.md) · Trademarks:
+[TRADEMARKS.md](TRADEMARKS.md) · References: [REFERENCES.md](REFERENCES.md).</sub>

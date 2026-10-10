@@ -4,6 +4,14 @@
   "description": "Offline delivery-outcome metrics (PR acceptance, cycle time, review rework, CI first-pass, reverts) from exported GitHub data, with explicit definitions and unknown AI attribution by default.",
   "license": "MIT",
   "author": "EnWithAI Technologies",
+  "homepage": "https://github.com/enwithai/outcome-check#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enwithai/outcome-check.git"
+  },
+  "bugs": {
+    "url": "https://github.com/enwithai/outcome-check/issues"
+  },
   "type": "module",
   "bin": {
     "outcome-check": "dist/cli/main.js"
@@ -22,7 +30,10 @@
     "README.md",
     "LICENSE",
     "SECURITY.md",
-    "CHANGELOG.md"
+    "CHANGELOG.md",
+    "NOTICE.md",
+    "ATTRIBUTION.md",
+    "TRADEMARKS.md"
   ],
   "engines": {
     "node": "^22 || ^24 || >=26"
@@ -56,5 +67,9 @@
     "typescript": "6.0.3",
     "typescript-eslint": "8.71.1",
     "vitest": "5.0.3"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "alpha"
   }
 }

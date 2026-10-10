@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: 2026 EnWithAI Technologies
 /**
  * Markdown reporter. Only tool-generated text and numbers are rendered (no titles or identities from the export);
  * file names are still escaped as code spans.
@@ -83,7 +85,7 @@ export function renderMarkdown(report: Report, options: RenderOptions): string {
       (report.inputs.runs ? `, ${code(report.inputs.runs.path)}` : "") +
       (report.inputs.attribution ? `, ${code(report.inputs.attribution.path)}` : "") +
       (options.branding
-        ? " · Built by EnWithAI · Part of CrewPE Engineering Commons · [crewpe.ai](https://crewpe.ai)</sub>"
+        ? " · An EnWithAI Engineering Commons tool · [crewpe.ai](https://crewpe.ai)</sub>"
         : "</sub>"),
     ""
   );

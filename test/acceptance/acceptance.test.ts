@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: 2026 EnWithAI Technologies
 /**
  * Acceptance scenarios O1–O4 (docs/SPEC.md §8). Expected values in test/acceptance/expected/ were computed by hand
  * from the specification before the metrics existed (verification-first). Metric changes must update them first.

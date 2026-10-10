@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: 2026 EnWithAI Technologies
 /**
  * Metric catalog and computation (docs/SPEC.md §5). Each metric maps a set of PRs to a rate (numerator/denominator)
  * or a distribution (median/p75/p90). Statistics: median = mean of the two middle values for even n; p75/p90 by

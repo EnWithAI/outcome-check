@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: 2026 EnWithAI Technologies
 /**
  * Library entry point: programmatic analysis, renderers, config validation and the metric catalog.
  */
