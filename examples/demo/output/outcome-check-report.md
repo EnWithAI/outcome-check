@@ -47,4 +47,4 @@ Attribution (file, labels): AI-assisted 75 · not AI-assisted 52 · unknown 31
 
 None detected.
 
-<sub>Outcome Check 0.1.0-alpha.0 · offline · inputs: `prs.json`, `runs.json`, `attribution.csv` · An EnWithAI Engineering Commons tool · [crewpe.ai](https://crewpe.ai)</sub>
+<sub>Outcome Check 0.1.0-alpha.1 · offline · inputs: `prs.json`, `runs.json`, `attribution.csv` · An EnWithAI Engineering Commons tool · [crewpe.ai](https://crewpe.ai)</sub>

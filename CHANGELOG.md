@@ -5,7 +5,14 @@ minor versions may break the report schema, which carries its own `schema_versio
 
 ## Unreleased
 
-## 0.1.0-alpha.0 — not published
+## 0.1.0-alpha.1 — 2026-10-10
+
+Documentation-only release, so the npm page shows the current project information. No code or report changes.
+
+- Maintainer and security contact: Koushik Ramani (@aiwithrk), EnWithAI Technologies; contact hello@enwithai.com.
+- GitHub private vulnerability reporting enabled and documented in SECURITY.md.
+
+## 0.1.0-alpha.0 — 2026-10-10 (published to npm)
 
 First alpha.
 
