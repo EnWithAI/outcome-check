@@ -6,10 +6,12 @@ Only the latest `0.x` alpha receives fixes.
 
 ## Reporting a vulnerability
 
-Please **do not open a public issue**. Use GitHub's private vulnerability reporting once the repository is public.
+Security contact: **Koushik Ramani** ([@aiwithrk](https://github.com/aiwithrk)), maintainer, EnWithAI Technologies.
+
+Please **do not open a public issue**. Use GitHub's private vulnerability reporting ("Report a vulnerability" on the
+Security tab).
 Include the Outcome Check version, the command and a minimal **synthetic** export. Never include real exports, since
-they contain names and logins. We aim to acknowledge within 5 business days. _(Private reporting is enabled at
-publication time; until then report directly to the maintainers at EnWithAI.)_
+they contain names and logins. We aim to acknowledge within 5 business days.
 
 ## Security and privacy properties Outcome Check is designed to keep
 
