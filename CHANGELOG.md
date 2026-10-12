@@ -5,6 +5,12 @@ minor versions may break the report schema, which carries its own `schema_versio
 
 ## Unreleased
 
+## 0.1.0 — 2026-10-12
+
+First release without a pre-release suffix, so `npm install @enwithai/outcome-check` and `npx @enwithai/outcome-check` work without a
+tag. No functional changes from 0.1.0-alpha.1. Still pre-1.0: the report schema and command options may change in minor
+versions.
+
 ## 0.1.0-alpha.1 — 2026-10-10
 
 Documentation-only release, so the npm page shows the current project information. No code or report changes.

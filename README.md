@@ -20,7 +20,7 @@ Each value is shown for all PRs, AI-assisted, not AI-assisted and attribution-un
 
 What it refuses to do: rank or name people, claim that AI _caused_ a difference, invent costs or ROI, or guess whether a PR was AI-assisted. Attribution is **unknown** unless your attribution file, a label or a commit trailer you configure says otherwise.
 
-> Status: **alpha** (`0.1.0-alpha.1`, report schema 1.0). Published on npm as [`@enwithai/outcome-check`](https://www.npmjs.com/package/@enwithai/outcome-check); see [Install](#install).
+> Status: **early release** (`0.1.0`, pre-1.0, report schema 1.0). Published on npm as [`@enwithai/outcome-check`](https://www.npmjs.com/package/@enwithai/outcome-check); see [Install](#install).
 
 ## 60-second demo
 
@@ -58,11 +58,11 @@ gh run list --limit 1000 \
 ## Install
 
 ```bash
-npm install --global @enwithai/outcome-check@alpha
+npm install --global @enwithai/outcome-check
 outcome-check --help
 ```
 
-Alpha releases are published under the `alpha` dist-tag. To build from source instead:
+To build from source instead:
 `git clone https://github.com/enwithai/outcome-check.git && cd outcome-check && npm ci --ignore-scripts && npm run build`.
 
 Uninstall with `npm uninstall --global @enwithai/outcome-check`.
