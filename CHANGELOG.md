@@ -5,6 +5,15 @@ minor versions may break the report schema, which carries its own `schema_versio
 
 ## Unreleased
 
+- Export guidance: `gh pr list --json …,commits` fails above 49 PRs ("exceeds the maximum limit of 500,000" nodes), so
+  the documented `--limit 1000` command did not work. docs/EXPORTING.md, the README and `--help` now give a paginated,
+  read-only `gh api graphql --paginate` query that exports the full history with commits in the `gh pr list --json`
+  record shape (verified on 223- and 750-PR public repositories), plus a quick `gh pr list` command without `commits`
+  and exactly what it loses: CI first-pass rate, commits after first review, CI run linking and commit-trailer
+  attribution.
+- `--prs` and `--runs` accept JSON Lines (one JSON object per non-blank line) as well as a JSON array. A file that is a
+  single JSON value must still be an array. Report output is unchanged.
+
 ## 0.1.0 — 2026-10-12
 
 First release without a pre-release suffix, so `npm install @enwithai/outcome-check` and `npx @enwithai/outcome-check` work without a

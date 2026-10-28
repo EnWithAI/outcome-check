@@ -2,7 +2,7 @@
 
 **What did the work actually deliver? Delivery-outcome metrics from data you export yourself, with every definition, denominator and sample size shown. Offline, and no per-person data.**
 
-Outcome Check reads a `gh pr list --json` export (plus, optionally, a `gh run list --json` export and an AI-attribution file) and reports:
+Outcome Check reads a PR export in the `gh pr list --json` shape (plus, optionally, a `gh run list --json` export and an AI-attribution file) and reports:
 
 | Metric                                                                      | Kind               |
 | --------------------------------------------------------------------------- | ------------------ |
@@ -44,11 +44,20 @@ The output matches [`examples/demo/output/outcome-check-report.md`](examples/dem
 
 ## Export your data
 
-Outcome Check never calls an API. Export with the GitHub CLI (or produce the same JSON shape another way):
+Outcome Check never calls an API. Export with the GitHub CLI (or produce the same JSON shape another way).
+
+**PRs with commits, full history.** `gh pr list --json …,commits` fails above 49 PRs (GitHub rejects the query for requesting more than 500,000 nodes), so use the paginated, read-only `gh api graphql --paginate … > prs.jsonl` query in [docs/EXPORTING.md](docs/EXPORTING.md#full-history-with-commits-recommended). It writes the same record shape as `gh pr list --json`, one per line, and `--prs` accepts it directly.
+
+**PRs without commits (quick).** CI first-pass rate and commits after first review become `unknown`, CI runs cannot be linked to PRs, and commit-trailer attribution stops working:
 
 ```bash
 gh pr list --state all --limit 1000 \
-  --json number,title,state,isDraft,createdAt,closedAt,mergedAt,author,labels,additions,deletions,reviews,commits > prs.json
+  --json number,title,state,isDraft,createdAt,closedAt,mergedAt,author,labels,additions,deletions,reviews > prs.json
+```
+
+**CI runs (optional):**
+
+```bash
 gh run list --limit 1000 \
   --json databaseId,headSha,event,status,conclusion,attempt,createdAt,workflowName > runs.json
 ```

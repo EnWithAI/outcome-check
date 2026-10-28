@@ -1,7 +1,7 @@
 # Architecture
 
 ```
-cli/run.ts ── analyze.ts ─┬─ input/read.ts        (size caps, JSON arrays, per-record validation, CSV/JSON attribution)
+cli/run.ts ── analyze.ts ─┬─ input/read.ts        (size caps, JSON arrays or JSON Lines, per-record validation, CSV/JSON attribution)
                           ├─ metrics/metrics.ts   (catalog, statistics, first-pass, revert matching, sample rules)
                           └─ report/{json,markdown,html,format,escape}.ts
 ```
