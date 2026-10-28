@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: MIT
 // SPDX-FileCopyrightText: 2026 EnWithAI Technologies
 /**
- * Input files: size-capped reading, JSON arrays from `gh pr list --json` / `gh run list --json`, and the attribution
+ * Input files: size-capped reading, JSON arrays from `gh pr list --json` / `gh run list --json` (or JSON Lines from the
+ * paginated `gh api graphql` export in docs/EXPORTING.md), and the attribution
  * file (CSV with a header, or JSON). Records are validated one by one; invalid records are counted, not fatal.
  * Identity fields are kept in memory only for aggregate logic and never reach the report.
  */
@@ -84,22 +85,45 @@ export function readInput(path: string, label: string): ReadFile {
   };
 }
 
-/** Parses a JSON array; throws an input error when the file is not a JSON array. */
+/**
+ * Parses a JSON array, or JSON Lines (one object per line, as printed by `gh api --paginate --jq '…[]'`); throws an
+ * input error otherwise. A file that is a single JSON value must be an array, so a wrapper object is never misread.
+ */
 export function parseJsonArray(text: string, label: string): unknown[] {
   let value: unknown;
   try {
     value = JSON.parse(text);
   } catch (error) {
-    throw inputError(`${label} is not valid JSON: ${(error as Error).message}`);
+    if (!text.trimStart().startsWith("{"))
+      throw inputError(`${label} is not valid JSON: ${(error as Error).message}`);
+    value = parseJsonLines(text, label);
   }
   if (!Array.isArray(value))
     throw inputError(
-      `${label} must be a JSON array`,
-      "Export with `gh pr list --json …` / `gh run list --json …`."
+      `${label} must be a JSON array or JSON Lines`,
+      "Export with `gh pr list --json …` / `gh run list --json …`, or the paginated query in docs/EXPORTING.md."
     );
   if (value.length > INPUT_LIMITS.maxRecords)
     throw inputError(`${label} has more than ${INPUT_LIMITS.maxRecords} records`);
   return value;
+}
+
+/** Parses JSON Lines: every non-blank line must be a JSON object. */
+function parseJsonLines(text: string, label: string): unknown[] {
+  const records: unknown[] = [];
+  const lines = text.split(/\r?\n/);
+  for (const [i, line] of lines.entries()) {
+    if (line.trim() === "") continue;
+    let record: unknown;
+    try {
+      record = JSON.parse(line);
+    } catch (error) {
+      throw inputError(`${label} line ${i + 1} is not valid JSON: ${(error as Error).message}`);
+    }
+    if (!isObject(record)) throw inputError(`${label} line ${i + 1} must be a JSON object`);
+    records.push(record);
+  }
+  return records;
 }
 
 /** Parses an ISO-8601 timestamp to epoch ms, or undefined when invalid. */
