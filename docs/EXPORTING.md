@@ -4,17 +4,73 @@ Outcome Check reads files; it never talks to GitHub. You choose what to export a
 
 ## Pull requests (required)
 
+### Full history, with commits (recommended)
+
+`gh pr list --json …,commits` cannot export more than **49 PRs**: gh asks for 100 commit authors per commit, and from
+`--limit 50` GitHub rejects the query ("requesting up to 505,050 possible nodes which exceeds the maximum limit of
+500,000"). Use this paginated, read-only GraphQL query instead. It fetches 50 PRs per request, asks only for the fields
+Outcome Check reads (about 15,000 possible nodes per page), and prints the records in the same shape as
+`gh pr list --json`, one per line (JSON Lines). It needs only `gh`, no `jq`.
+
 ```bash
-gh pr list --repo OWNER/REPO --state all --limit 1000 \
-  --json number,title,state,isDraft,createdAt,closedAt,mergedAt,author,labels,additions,deletions,reviews,commits > prs.json
+gh api graphql --paginate -F owner=OWNER -F name=REPO -f query='
+  query($owner: String!, $name: String!, $endCursor: String) {
+    repository(owner: $owner, name: $name) {
+      pullRequests(first: 50, after: $endCursor, orderBy: {field: CREATED_AT, direction: DESC}) {
+        pageInfo { hasNextPage endCursor }
+        nodes {
+          number title state isDraft createdAt closedAt mergedAt additions deletions
+          author { __typename login }
+          labels(first: 100) { nodes { name } }
+          reviews(first: 100) { nodes { author { login } state submittedAt } }
+          commits(first: 100) { nodes { commit { oid committedDate messageHeadline messageBody } } }
+        }
+      }
+    }
+  }' --jq '.data.repository.pullRequests.nodes[] | {number, title, state, isDraft, createdAt, closedAt, mergedAt,
+    additions, deletions, labels: .labels.nodes, reviews: .reviews.nodes, commits: [.commits.nodes[].commit],
+    author: (if .author == null then null elif .author.__typename == "Bot"
+      then {is_bot: true, login: ("app/" + .author.login)} else {is_bot: false, login: .author.login} end)}' > prs.jsonl
 ```
 
-- `--limit` defaults to **30**. An export with exactly 20, 30, 50, 100, 200, 300, 500, 1000, 2000, 5000 or 10000
-  records is flagged as `possible-truncated-export`.
-- `reviews` and `commits` are capped at **100 per PR** by gh (`reviews(first: 100)`, `commits(first: 100)`). PRs at
-  the cap are flagged (`reviews-truncated`, `commits-truncated`).
-- Leaving out `reviews` makes the review and rework metrics `unknown`. Leaving out `commits` makes CI first-pass and
-  post-review commits `unknown`.
+Then pass the file as usual: `outcome-check report --prs prs.jsonl`. `--prs` and `--runs` accept a JSON array or JSON
+Lines (one JSON object per non-blank line); a file that is one JSON value must be an array.
+
+- Verified on 2026-10-28 with gh 2.102.0 against `cli/go-gh` (223 PRs, all exported) and `sindresorhus/execa` (750
+  PRs, 1,596 commits, about 80 s). For the newest 30 PRs of `cli/go-gh`, every field Outcome Check reads (including bot
+  authors) was identical to `gh pr list --json`.
+- It is read-only and runs one request per 50 PRs against your GraphQL rate limit (5,000 points per hour); each page
+  costs a few points. If a large repository times out, lower `first: 50`.
+- Bots are mapped to `{"is_bot": true, "login": "app/<name>"}`, as gh does. The records leave out fields Outcome Check
+  never reads (ids, emails, commit authors).
+- An empty repository writes an empty file, which is rejected; a repository with exactly one PR writes one object,
+  which is also rejected. Wrap it in `[` `]` in that case.
+
+### Without commits (quick, but CI and post-review metrics are lost)
+
+```bash
+gh pr list --repo OWNER/REPO --state all --limit 1000 \
+  --json number,title,state,isDraft,createdAt,closedAt,mergedAt,author,labels,additions,deletions,reviews > prs.json
+```
+
+Leaving out `commits` loses exactly this:
+
+- **CI first-pass rate** becomes `unknown` (`field-not-exported`): runs are linked to PRs through commit SHAs, so every
+  run in `--runs` is counted as `runs-not-linked`.
+- **Commits after first review** (rework proxy) becomes `unknown` (`field-not-exported`).
+- **Commit-trailer attribution** (`attribution.commit_trailers`) cannot mark any PR as AI-assisted; only the
+  attribution file and labels still work.
+- The report adds the `commits-not-exported` limitation, and `commits-truncated` can no longer be detected.
+
+Acceptance rate, cycle time, review metrics, changes requested, reverted PRs and PR size are unaffected.
+
+### Notes for both exports
+
+- `gh pr list --limit` defaults to **30**. An export with exactly 20, 30, 50, 100, 200, 300, 500, 1000, 2000, 5000 or
+  10000 records is flagged as `possible-truncated-export`.
+- `reviews` and `commits` are capped at **100 per PR** (`reviews(first: 100)`, `commits(first: 100)`). PRs at the cap
+  are flagged (`reviews-truncated`, `commits-truncated`).
+- Leaving out `reviews` makes the review and rework metrics `unknown`.
 - Field shapes were verified against the gh source (`cli/cli`, `api/query_builder.go`, `api/export_pr.go`, Oct 2026).
   Bots serialize as `{"is_bot": true, "login": "app/<name>"}` and are excluded unless `include_bots` is set.
 

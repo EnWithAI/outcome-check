@@ -7,9 +7,10 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { validateConfig } from "../src/config.js";
-import { parseAttribution, parseCsv, toPullRequest, toRun } from "../src/input/read.js";
+import { parseAttribution, parseCsv, parseJsonArray, toPullRequest, toRun } from "../src/input/read.js";
 import { extent, firstPass, median, nearestRank, round } from "../src/metrics/metrics.js";
-import { reportJson, tempFiles } from "./helpers.js";
+import type { Report } from "../src/types.js";
+import { fixture, reportJson, tempFiles } from "./helpers.js";
 
 const sha = (c: string): string => c.repeat(40);
 
@@ -106,6 +107,52 @@ describe("input parsing", () => {
       attempt: 1,
       conclusion: "success",
     });
+  });
+
+  it("JSON Lines from the paginated gh api graphql export (docs/EXPORTING.md)", () => {
+    // Synthetic records in the exact shape the documented `--jq` filter prints: one compact object per line.
+    const lines = [
+      '{"additions":3,"author":{"is_bot":true,"login":"app/dependabot"},"closedAt":"2026-09-02T00:00:00Z","commits":[{"committedDate":"2026-09-01T00:00:00Z","messageBody":"","messageHeadline":"Bump x","oid":"' +
+        sha("b") +
+        '"}],"createdAt":"2026-09-01T00:00:00Z","deletions":1,"isDraft":false,"labels":[{"name":"deps"}],"mergedAt":"2026-09-02T00:00:00Z","number":2,"reviews":[],"state":"MERGED","title":"Bump x"}',
+      '{"additions":5,"author":{"is_bot":false,"login":"dev"},"closedAt":null,"commits":[],"createdAt":"2026-09-03T00:00:00Z","deletions":0,"isDraft":true,"labels":[],"mergedAt":null,"number":1,"reviews":[{"author":{"login":"rev"},"state":"APPROVED","submittedAt":"2026-09-03T01:00:00Z"}],"state":"OPEN","title":"Wip"}',
+    ];
+    const records = parseJsonArray(lines.join("\n") + "\n", "--prs");
+    expect(records).toHaveLength(2);
+    const [bot, open] = records.map(toPullRequest);
+    expect(bot).toMatchObject({ number: 2, isBot: true, labels: ["deps"], size: 4 });
+    expect(bot?.commits).toEqual([
+      { oid: sha("b"), committedDate: Date.parse("2026-09-01T00:00:00Z"), message: "Bump x\n" },
+    ]);
+    expect(open).toMatchObject({ number: 1, state: "OPEN", isDraft: true, closedAt: null });
+    expect(open?.reviews).toEqual([
+      { login: "rev", state: "APPROVED", submittedAt: Date.parse("2026-09-03T01:00:00Z") },
+    ]);
+    expect(parseJsonArray("\r\n" + lines.join("\r\n\r\n") + "\r\n", "--prs")).toHaveLength(2);
+    expect(() => parseJsonArray(lines[0] + "\n{broken", "--prs")).toThrow(/line 2 is not valid JSON/);
+    expect(() => parseJsonArray(lines[0] + "\n[1]", "--prs")).toThrow(/line 2 must be a JSON object/);
+    expect(() => parseJsonArray("[1]\n[2]", "--prs")).toThrow(/not valid JSON/);
+    expect(() => parseJsonArray('{\n  "number": 1\n}', "--prs")).toThrow(
+      /must be a JSON array or JSON Lines/
+    );
+    expect(() => parseJsonArray('{"prs":[]}\n', "--prs")).toThrow(/must be a JSON array or JSON Lines/);
+  });
+
+  it("JSON Lines and a JSON array give the same report", async () => {
+    const prs = JSON.parse(readFileSync(fixture("o1/prs.json"), "utf8")) as unknown[];
+    const dir = tempFiles({
+      "prs.json": prs,
+      "prs.jsonl": prs.map((p) => JSON.stringify(p)).join("\n") + "\n",
+      "runs.json": JSON.parse(readFileSync(fixture("o1/runs.json"), "utf8")),
+    });
+    const strip = ({ inputs: _inputs, run_metadata: meta, ...rest }: Report): unknown => ({
+      ...rest,
+      run_metadata: { ...meta, generated_at: "", duration_ms: 0 },
+    });
+    const fromArray = await reportJson(dir, ["report", "--prs", "prs.json", "--runs", "runs.json"]);
+    const fromLines = await reportJson(dir, ["report", "--prs", "prs.jsonl", "--runs", "runs.json"]);
+    expect(fromLines.inputs.prs.records).toBe(fromArray.inputs.prs.records);
+    expect(strip(fromLines)).toEqual(strip(fromArray));
   });
 });
 

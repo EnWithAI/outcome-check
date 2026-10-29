@@ -34,12 +34,16 @@ Usage:
   outcome-check --help | --version
 
 Export inputs yourself (Outcome Check never calls an API):
-  gh pr list --state all --limit 1000 --json number,title,state,isDraft,createdAt,closedAt,mergedAt,author,labels,additions,deletions,reviews,commits > prs.json
+  Full PR history with commits: the paginated \`gh api graphql --paginate … > prs.jsonl\` query in docs/EXPORTING.md
+    (https://github.com/enwithai/outcome-check/blob/main/docs/EXPORTING.md). \`gh pr list --json …,commits\` fails
+    above 49 PRs (GitHub's 500,000-node limit).
+  Quick, without commits (CI first-pass, commits after first review and commit-trailer attribution become unknown):
+  gh pr list --state all --limit 1000 --json number,title,state,isDraft,createdAt,closedAt,mergedAt,author,labels,additions,deletions,reviews > prs.json
   gh run list --limit 1000 --json databaseId,headSha,event,status,conclusion,attempt,createdAt,workflowName > runs.json
 
 Options:
-  --prs <file>               PR export (JSON array, required)
-  --runs <file>              CI run export (JSON array)
+  --prs <file>               PR export (JSON array or JSON Lines, required)
+  --runs <file>              CI run export (JSON array or JSON Lines)
   --attribution <file>       CSV (pr,ai_assisted[,cost,currency]) or JSON; AI attribution is unknown otherwise
   --since / --until <date>   Window, YYYY-MM-DD inclusive, UTC (default: all data)
   --baseline-since / --baseline-until <date>   Optional baseline window (both required)
