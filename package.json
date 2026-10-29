@@ -1,6 +1,6 @@
 {
   "name": "@enwithai/outcome-check",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Offline delivery-outcome metrics (PR acceptance, cycle time, review rework, CI first-pass, reverts) from exported GitHub data, with explicit definitions and unknown AI attribution by default.",
   "license": "MIT",
   "author": "EnWithAI Technologies",

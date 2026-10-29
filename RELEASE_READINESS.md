@@ -1,4 +1,30 @@
-# Release readiness — Outcome Check 0.1.0-alpha.0
+# Release readiness — Outcome Check 0.2.0
+
+Date: 2026-10-29 · Branch `release/v0.2.0` · **Verdict: READY FOR HUMAN REVIEW**. The npm release of 0.2.0 was
+requested by the user on 2026-10-29; the user publishes with 2FA.
+
+## 0.2.0 (2026-10-29, Node v25.9.0)
+
+Changes since 0.1.0 (EnWithAI/outcome-check#3):
+
+- A paginated, read-only `gh api graphql` PR export with commits. The documented `gh pr list …,commits` failed from 50
+  PRs on GitHub's 500,000-node limit; Commons Check's first real run found this.
+- `--prs` and `--runs` accept JSON Lines.
+
+Report schema unchanged (1.0).
+
+| Check            | Command                                                 | Result                                                                                                                                    |
+| ---------------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Full gate        | `npm run check:all`                                     | exit 0; 6 files / 35 tests passed; lines 97.75%, branches 87.75%                                                                          |
+| Licenses / audit | `node scripts/license-audit.mjs` / `--all`; `npm audit` | 0 production packages; dev 41 (MIT 39, BSD-3-Clause 1, Apache-2.0 1); 0 disallowed; 0 vulnerabilities                                     |
+| Package          | `npm pack --dry-run`                                    | 39 files, 33.8 kB                                                                                                                         |
+| Clean install    | tgz → empty directory                                   | `--version` 0.2.0; `--help` shows the paginated export                                                                                    |
+| Real exports     | documented query → packed CLI                           | EnWithAI/impact-check: 6 PRs, CI first-pass rate computed (100%, n = 5) with `--runs`; cli/go-gh: 223 PRs, 453 commits, 0 invalid records |
+| Demo             | `scripts/generate-demo-output.mjs`                      | regenerated; only the tool version line changed                                                                                           |
+
+---
+
+# Release readiness — Outcome Check 0.1.0-alpha.0 (history)
 
 Date: 2026-10-09 · Branch `alpha/outcome-check-0.1` · **Verdict: READY FOR HUMAN REVIEW** (not published; publication
 needs explicit approval).

@@ -20,7 +20,7 @@ Each value is shown for all PRs, AI-assisted, not AI-assisted and attribution-un
 
 What it refuses to do: rank or name people, claim that AI _caused_ a difference, invent costs or ROI, or guess whether a PR was AI-assisted. Attribution is **unknown** unless your attribution file, a label or a commit trailer you configure says otherwise.
 
-> Status: **early release** (`0.1.0`, pre-1.0, report schema 1.0). Published on npm as [`@enwithai/outcome-check`](https://www.npmjs.com/package/@enwithai/outcome-check); see [Install](#install).
+> Status: **early release** (`0.2.0`, pre-1.0, report schema 1.0). Published on npm as [`@enwithai/outcome-check`](https://www.npmjs.com/package/@enwithai/outcome-check); see [Install](#install).
 
 ## 60-second demo
 
